@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../build/css/app.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Prueba1</h1>
-</body>
-</html>
+<?php
+    include __DIR__ ."/template/header.php";
+?>
+<main>
+    <h1>Home</h1>
+</main>
+<?php
+    include __DIR__ ."/template/footer.php";
+?>
