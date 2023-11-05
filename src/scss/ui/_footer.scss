@@ -1,0 +1,34 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: vr.$primario;
+
+    @include mxn.tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    &__sociales{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin: 3rem 0;
+    }
+    
+    &__social{
+        color: vr.$blanco;
+        font-size: 2rem;        
+    }
+
+    &__copyright{
+        color: vr.$blanco;
+        font-size: 1rem;
+        margin: 0;
+    }
+}
