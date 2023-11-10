@@ -1,0 +1,228 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.main {
+    position: relative;
+    display: grid;
+    grid:
+      "div1 div3" 1fr
+      "div2 div3" 1fr
+      / 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+
+    @include mxn.telefono{
+        grid:
+            "div1" 1fr
+            "div2" 1fr
+            / 1fr;
+    }
+
+    @include mxn.tablet{
+        grid:
+            "div1 div3" 1fr
+            "div2 div3" 1fr
+            / 1fr 1fr;
+    }
+
+}
+
+.div1 { 
+    padding-left: 100px;
+    grid-area: div1;
+
+    @include mxn.telefono{
+        padding-left: 50px;
+    }
+
+    @include mxn.tablet{
+        padding-top: 0px;
+        padding-left: 50px;
+    }
+}
+.div3 { 
+    grid-area: div3;
+    @include mxn.telefono{
+        display: none;
+    }
+
+    @include mxn.tablet{
+        display: grid;
+    }
+
+    @include mxn.desktop{
+        display: grid;
+    }
+
+}
+.div2 { 
+    padding: 0 0 100px 50px;
+    grid-area: div2;
+
+    @include mxn.telefono{
+        padding: 0 0 50px 100px;
+    }
+
+    @include mxn.tablet{
+        padding: 0 0 50px 50px;
+    }
+
+    @include mxn.desktop{
+        padding: 0 0 100px 50px;
+    }
+
+}
+
+.fuente{
+    line-height: 1.5;
+    &_superior{
+        color: vr.$negro;
+        font-size: 5rem;
+        font-family: vr.$fuente-principal;
+        font-weight: 600; 
+        word-wrap: break-word;
+
+        @include mxn.telefono{
+            font-size: 4rem;
+        }
+    
+        @include mxn.desktop{
+            font-size: 5rem;
+        }
+
+    }
+
+    &_dorada{
+        color: vr.$primario;
+        font-size: 5rem;
+        font-family: vr.$fuente-principal;
+        font-weight: 600;
+        word-wrap: break-word;
+
+        @include mxn.telefono{
+            font-size: 4rem;
+        }
+    
+        @include mxn.desktop{
+            font-size: 5rem;
+        }
+    }
+
+    &_inferior{
+        color: vr.$negro;
+        font-size: 1.813rem;
+        font-family: vr.$fuente-principal;
+        font-weight: 500;
+        word-wrap: break-word;
+
+        @include mxn.telefono{
+            font-size: 1.5rem;
+        }
+    
+        @include mxn.tablet{
+            font-size: 1.813rem;
+        }
+    }
+}
+
+.boton_buscar{
+    width: 24rem;
+    height: 8rem;
+
+    @include mxn.telefono{
+        width: 23rem;
+        height: 7rem;
+    }
+
+    @include mxn.tablet{
+        width: 23rem;
+        height: 7rem;
+    }
+
+    @include mxn.desktop{
+        width: 24rem;
+        height: 8rem;
+    }
+
+}
+
+.boton_flecha{
+    transform: translate(40%,-80%);
+    width: 3rem;
+    height: 3rem;
+}
+
+.rectangulo_derecha,
+.libros_grande {
+    position: absolute;
+    transform: translate(50%,-55%);
+    width: 35rem;
+    height: 35rem;
+
+    @include mxn.tablet{
+        width: 25rem;
+        height: 25rem;
+    }
+    @include mxn.desktop{
+        width: 35rem;
+        height: 35rem;
+        transform: translate(42%,-55%);
+        
+    }
+
+}
+
+.libros_grande {
+    z-index: 1;
+}
+
+.rectangulo_derecha {
+    z-index: 0;
+}
+
+.rectangulo_izquierda,
+.libros_mini {
+    position: absolute;
+    
+}
+
+.libros_mini {
+    width: 12rem;
+    height: 11rem;
+    z-index: 1;
+    transform: translate(57%,-60%);
+
+    @include mxn.tablet{
+        width: 9rem;
+        height: 8rem;
+        transform: translate(63%,-60%);
+    }
+    @include mxn.desktop{
+        width: 12rem;
+        height: 11rem;
+        transform: translate(40%,-60%);
+    }
+
+}
+
+.rectangulo_izquierda {
+    width: 14rem;
+    height: 15rem;
+    transform: translate(40%,-57%);
+    z-index: 0;
+
+    @include mxn.tablet{
+        width: 10rem;
+        height: 11rem;
+        transform: translate(50%,-57%);
+    }
+    @include mxn.desktop{
+        width: 14rem;
+        height: 15rem;
+        transform: translate(27%,-57%);
+    }
+
+}
