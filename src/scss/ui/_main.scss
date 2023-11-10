@@ -5,8 +5,8 @@
     position: relative;
     display: grid;
     grid:
-      "div1 div3" 1fr
-      "div2 div3" 1fr
+      "contFuenteSup contDerecha" 1fr
+      "contBotonInf contDerecha" 1fr
       / 1fr 1fr;
     justify-content: center;
     align-content: center;
@@ -16,23 +16,23 @@
 
     @include mxn.telefono{
         grid:
-            "div1" 1fr
-            "div2" 1fr
+            "contFuenteSup" 1fr
+            "contBotonInf" 1fr
             / 1fr;
     }
 
     @include mxn.tablet{
         grid:
-            "div1 div3" 1fr
-            "div2 div3" 1fr
+            "contFuenteSup contDerecha" 1fr
+            "contBotonInf contDerecha" 1fr
             / 1fr 1fr;
     }
 
 }
 
-.div1 { 
+.contFuenteSup { 
     padding-left: 100px;
-    grid-area: div1;
+    grid-area: contFuenteSup;
 
     @include mxn.telefono{
         padding-left: 50px;
@@ -43,8 +43,8 @@
         padding-left: 50px;
     }
 }
-.div3 { 
-    grid-area: div3;
+.contDerecha { 
+    grid-area: contDerecha;
     @include mxn.telefono{
         display: none;
     }
@@ -58,9 +58,9 @@
     }
 
 }
-.div2 { 
+.contBotonInf { 
     padding: 0 0 100px 50px;
-    grid-area: div2;
+    grid-area: contBotonInf;
 
     @include mxn.telefono{
         padding: 0 0 50px 100px;

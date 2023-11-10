@@ -537,7 +537,7 @@ h3 {
 .main {
   position: relative;
   display: grid;
-  grid: "div1 div3" 1fr "div2 div3" 1fr/1fr 1fr;
+  grid: "contFuenteSup contDerecha" 1fr "contBotonInf contDerecha" 1fr/1fr 1fr;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -546,66 +546,66 @@ h3 {
 }
 @media (min-width: 480px) {
   .main {
-    grid: "div1" 1fr "div2" 1fr/1fr;
+    grid: "contFuenteSup" 1fr "contBotonInf" 1fr/1fr;
   }
 }
 @media (min-width: 768px) {
   .main {
-    grid: "div1 div3" 1fr "div2 div3" 1fr/1fr 1fr;
+    grid: "contFuenteSup contDerecha" 1fr "contBotonInf contDerecha" 1fr/1fr 1fr;
   }
 }
 
-.div1 {
+.contFuenteSup {
   padding-left: 100px;
-  grid-area: div1;
+  grid-area: contFuenteSup;
 }
 @media (min-width: 480px) {
-  .div1 {
+  .contFuenteSup {
     padding-left: 50px;
   }
 }
 @media (min-width: 768px) {
-  .div1 {
+  .contFuenteSup {
     padding-top: 0px;
     padding-left: 50px;
   }
 }
 
-.div3 {
-  grid-area: div3;
+.contDerecha {
+  grid-area: contDerecha;
 }
 @media (min-width: 480px) {
-  .div3 {
+  .contDerecha {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .div3 {
+  .contDerecha {
     display: grid;
   }
 }
 @media (min-width: 1024px) {
-  .div3 {
+  .contDerecha {
     display: grid;
   }
 }
 
-.div2 {
+.contBotonInf {
   padding: 0 0 100px 50px;
-  grid-area: div2;
+  grid-area: contBotonInf;
 }
 @media (min-width: 480px) {
-  .div2 {
+  .contBotonInf {
     padding: 0 0 50px 100px;
   }
 }
 @media (min-width: 768px) {
-  .div2 {
+  .contBotonInf {
     padding: 0 0 50px 50px;
   }
 }
 @media (min-width: 1024px) {
-  .div2 {
+  .contBotonInf {
     padding: 0 0 100px 50px;
   }
 }

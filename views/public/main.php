@@ -1,9 +1,9 @@
 <main class="main">
-    <div class="div1 fuente">
+    <div class="contFuenteSup fuente">
         <span class="fuente_superior">Compra libros por<br/>el mejor </span><span class="fuente_dorada">precio.</span><br>
         <span class="fuente_inferior">¡Descubre los mejores precios para comprar libros!</span>
     </div>
-    <div class="div2">
+    <div class="contBotonInf">
         <picture>
             <source srcset="../../build/img/Boton-Buscar.avif" type="image/avif">
             <source srcset="../../build/img/Boton-Buscar.webp" type="image/webp">
@@ -15,7 +15,7 @@
             <img class="boton_flecha" loading="lazy" src="../../build/img/flecha.png" alt="Buscar">
         </picture>
     </div>
-    <div class="div3">
+    <div class="contDerecha">
         <picture>
             <source srcset="../../build/img/fondoazul.avif" type="image/avif">
             <source srcset="../../build/img/fondoazul.webp" type="image/webp">
