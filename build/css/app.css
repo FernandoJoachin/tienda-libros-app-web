@@ -533,4 +533,201 @@ h3 {
   font-size: 1rem;
   margin: 0;
 }
+
+.login {
+  margin: 0;
+  padding: 0;
+  background-color: #C5801A;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.login__contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+@media (min-width: 1024px) {
+  .login__contenedor {
+    left: 23%;
+  }
+}
+.login__titulo {
+  color: #C5801A;
+  text-align: center;
+  padding: 25px 0;
+  margin: 0;
+  border-bottom: 1px solid silver;
+}
+
+.formulario-login {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.formulario-login__campo {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.formulario-login__campo span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: 0.4s;
+}
+.formulario-login__campo input:focus ~ label,
+.formulario-login__campo input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+.formulario-login__campo input:focus ~ span::before,
+.formulario-login__campo input:valid ~ span::before {
+  width: 100%;
+}
+.formulario-login__input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.formulario-login__input--submit {
+  width: 100%;
+  height: 50px;
+  border: 0px solid #e9f4fb;
+  background: #FFC42A;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin-top: 25px;
+  transition: 0.5s;
+}
+.formulario-login__input--submit:hover {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  transition: 0.5s;
+}
+.formulario-login__label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.formulario-login__enlace {
+  color: #a6a6a6;
+  cursor: pointer;
+  font-size: 80%;
+  text-decoration: none;
+}
+.formulario-login__enlace:hover {
+  text-decoration: underline;
+}
+.formulario-login__registrarse {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.formulario-login__registrarse-enlace {
+  color: #2691d9;
+  text-decoration: none;
+}
+.formulario-login__registrarse-enlace:hover {
+  text-decoration: underline;
+}
+
+.rectangle {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .rectangle {
+    position: fixed;
+    width: 815px;
+    height: 1200px;
+    right: -10px;
+    top: -20px;
+    border: 0px solid #000000;
+    background: url(../img/Rectangle.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline;
+  }
+}
+
+.chandelier {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .chandelier {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    right: 550px;
+    top: 0;
+    border: 0px solid #000000;
+    background: url(../img/Chandelier.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline;
+  }
+}
+
+.person {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .person {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 278px;
+    top: 260px;
+    border: 0px solid #000000;
+    background: url(../img/Person.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline;
+  }
+}
+
+.books {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .books {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 650px;
+    top: 280px;
+    background: url(../img/Libros.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline;
+  }
+}
 /*# sourceMappingURL=app.css.map */
