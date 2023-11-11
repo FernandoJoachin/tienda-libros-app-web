@@ -1,1 +1,28 @@
 node_modules
+
+#-------------------------
+# Temporary Files
+#-------------------------
+writable/cache/*
+!writable/cache/index.html
+
+writable/logs/*
+!writable/logs/index.html
+
+writable/session/*
+!writable/session/index.html
+
+writable/uploads/*
+!writable/uploads/index.html
+
+writable/debugbar/*
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+
+# assets
+/public/assets/css/**
+/public/assets/js/**
+/public/assets/img/**
