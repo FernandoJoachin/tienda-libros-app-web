@@ -5,23 +5,25 @@
     position: relative;
     display: grid;
     grid:
-      "contFuenteSup contDerecha" 1fr
-      "contBotonInf contDerecha" 1fr
-      / 1fr 1fr;
+        "contFuenteSup" 1fr
+        "contBotonInf" 1fr
+        / 1fr;
     justify-content: center;
     align-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 100px);
 
-    @include mxn.telefono{
+    @include mxn.tablet{
+        
         grid:
             "contFuenteSup" 1fr
+            "contDerecha" 1fr
             "contBotonInf" 1fr
             / 1fr;
     }
 
-    @include mxn.tablet{
+    @include mxn.desktop{
+        padding: 12rem 0 12rem 0;
         grid:
             "contFuenteSup contDerecha" 1fr
             "contBotonInf contDerecha" 1fr
@@ -31,25 +33,23 @@
 }
 
 .contFuenteSup { 
-    padding-left: 100px;
+    padding-left: 20px;
     grid-area: contFuenteSup;
 
-    @include mxn.telefono{
-        padding-left: 50px;
+    @include mxn.tablet{
+        padding-left: 150px;
     }
 
-    @include mxn.tablet{
-        padding-top: 0px;
-        padding-left: 50px;
+    @include mxn.desktop{
+        padding-left: 100px;
     }
 }
 .contDerecha { 
+    display: grid;
     grid-area: contDerecha;
-    @include mxn.telefono{
-        display: none;
-    }
 
     @include mxn.tablet{
+        padding: 3rem 0 3.5rem 0;
         display: grid;
     }
 
@@ -59,19 +59,15 @@
 
 }
 .contBotonInf { 
-    padding: 0 0 100px 50px;
+    padding: 0 0 0 50px;
     grid-area: contBotonInf;
-
-    @include mxn.telefono{
-        padding: 0 0 50px 100px;
-    }
 
     @include mxn.tablet{
         padding: 0 0 50px 50px;
     }
 
     @include mxn.desktop{
-        padding: 0 0 100px 50px;
+        padding: 50px 0 50px 50px;
     }
 
 }
@@ -80,14 +76,10 @@
     line-height: 1.5;
     &_superior{
         color: vr.$negro;
-        font-size: 5rem;
+        font-size: 4rem;
         font-family: vr.$fuente-principal;
         font-weight: 600; 
         word-wrap: break-word;
-
-        @include mxn.telefono{
-            font-size: 4rem;
-        }
     
         @include mxn.desktop{
             font-size: 5rem;
@@ -97,14 +89,10 @@
 
     &_dorada{
         color: vr.$primario;
-        font-size: 5rem;
+        font-size: 4rem;
         font-family: vr.$fuente-principal;
         font-weight: 600;
         word-wrap: break-word;
-
-        @include mxn.telefono{
-            font-size: 4rem;
-        }
     
         @include mxn.desktop{
             font-size: 5rem;
@@ -113,14 +101,10 @@
 
     &_inferior{
         color: vr.$negro;
-        font-size: 1.813rem;
+        font-size: 1.5rem;
         font-family: vr.$fuente-principal;
         font-weight: 500;
         word-wrap: break-word;
-
-        @include mxn.telefono{
-            font-size: 1.5rem;
-        }
     
         @include mxn.tablet{
             font-size: 1.813rem;
@@ -129,15 +113,11 @@
 }
 
 .boton_buscar{
-    width: 24rem;
-    height: 8rem;
-
-    @include mxn.telefono{
-        width: 23rem;
-        height: 7rem;
-    }
+    width: 23rem;
+    height: 7rem;
 
     @include mxn.tablet{
+        transform: translate(60%,20%);
         width: 23rem;
         height: 7rem;
     }
@@ -150,26 +130,32 @@
 }
 
 .boton_flecha{
-    transform: translate(40%,-80%);
+    transform: translate(40%,-65%);
     width: 3rem;
     height: 3rem;
+    @include mxn.tablet{
+        transform: translate(550%,-20%);
+    }
 }
 
 .rectangulo_derecha,
 .libros_grande {
+    display: none;
     position: absolute;
-    transform: translate(50%,-55%);
     width: 35rem;
     height: 35rem;
 
     @include mxn.tablet{
+        transform: translate(120%,0%);
+        display: block;
         width: 25rem;
         height: 25rem;
     }
     @include mxn.desktop{
+        display: block;
         width: 35rem;
         height: 35rem;
-        transform: translate(42%,-55%);
+        transform: translate(42%,-30%);
         
     }
 
@@ -185,44 +171,47 @@
 
 .rectangulo_izquierda,
 .libros_mini {
-    position: absolute;
+    
     
 }
 
 .libros_mini {
+    display: none;
     width: 12rem;
     height: 11rem;
     z-index: 1;
-    transform: translate(57%,-60%);
 
     @include mxn.tablet{
+        display: block;
         width: 9rem;
         height: 8rem;
-        transform: translate(63%,-60%);
+        transform: translate(250%,-30%);
     }
     @include mxn.desktop{
+        display: block;
         width: 12rem;
         height: 11rem;
-        transform: translate(40%,-60%);
+        transform: translate(40%,-120%);
     }
 
 }
 
 .rectangulo_izquierda {
+    display: none;
     width: 14rem;
     height: 15rem;
-    transform: translate(40%,-57%);
     z-index: 0;
 
     @include mxn.tablet{
+        display: block;
         width: 10rem;
         height: 11rem;
-        transform: translate(50%,-57%);
+        transform: translate(220%,65%);
     }
     @include mxn.desktop{
         width: 14rem;
         height: 15rem;
-        transform: translate(27%,-57%);
+        transform: translate(27%,0%);
     }
 
 }
