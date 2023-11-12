@@ -19,12 +19,19 @@
             <div class="person"></div>
 
             <div class="login__contenedor">
+                <div class="login__img">
+                    <picture>
+                        <source srcset="<?= base_url();?>public/assets/img/logo.avif" type="image/avif">
+                        <source srcset="<?= base_url();?>public/assets/img/logo.webp" type="image/webp">
+                        <img loading="lazy" width="200" height="200" src="<?= base_url();?>public/assets/img/logo.png" alt="Logo">
+                    </picture>
+                </div>
                 <h1 class="login__titulo">Iniciar Sesión</h1>
 
                 <?php $errors = session()->get('errors'); ?>
-                <form class="formulario-login" method="post">
+                <form class="formulario-login" method="post" action="<?= base_url();?>">
                     <div class="formulario-login__campo">
-                        <input class="formulario-login__input" name="userEmail" type="email" value="<?= old('userEmail'); ?>" required>
+                        <input class="formulario-login__input" name="userEmail" type="text" value="<?= old('userEmail'); ?>" required>
                         <span></span>
                         <label class="formulario-login__label">Usuario</label>
                     </div>
