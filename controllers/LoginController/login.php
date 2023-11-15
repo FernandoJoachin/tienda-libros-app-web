@@ -24,5 +24,5 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         }
     }
 
-    header("Location: " . $GLOBALS["raiz_sitio"]. "?" . http_build_query(['errors' => $errores]));
+    header("Location: " . $GLOBALS["raiz_sitio"]. "?" . http_build_query(['errors' => $errores, 'usuario' => $usuario]));
 }
