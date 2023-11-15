@@ -2,8 +2,8 @@
         <a href="#" class="logo">
             <div class="logo__img">
                 <picture>
-                    <source srcset="../../build/img/logo-inverso.avif" type="image/avif">
-                    <source srcset="../../build/img/logo-inverso.webp" type="image/webp">
+                    <source srcset="./build/img/logo-inverso.avif" type="image/avif">
+                    <source srcset="./build/img/logo-inverso.webp" type="image/webp">
                     <img loading="lazy" width="200" height="200" src="../../build/img/logo-inverso.png" alt="Logo">
                 </picture>
             </div>
