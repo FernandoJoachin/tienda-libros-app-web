@@ -33,7 +33,7 @@
                 ?>
                 <form class="formulario-login" method="post" action="./controllers/LoginController/login.php">
                     <div class="formulario-login__campo">
-                        <input class="formulario-login__input" name="userEmail" type="text" value="<?= $usuario['userEmail'];?>" required>
+                        <input class="formulario-login__input" name="userEmail" type="text" value="<?= $usuario['userEmail'] ?? "" ?>" required>
                         <span></span>
                         <label class="formulario-login__label">Usuario</label>
                     </div>
