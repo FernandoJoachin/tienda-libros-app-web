@@ -1,3 +1,6 @@
+<?php
+    require_once __DIR__ . '/controllers/LoginController/login.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -28,12 +31,13 @@
                 <h1 class="login__titulo">Iniciar Sesión</h1>
                 
                 <?php 
-                    $errors = $_GET["errors"] ?? [];
-                    $usuario = $_GET["usuario"] ?? "";
+                    $response = iniciarSesion();
+                    $errors = $response['errors'] ?? [];
+                    $usuario = $response['usuario'] ?? "";
                 ?>
-                <form class="formulario-login" method="post" action="./controllers/LoginController/login.php">
+                <form class="formulario-login" method="post">
                     <div class="formulario-login__campo">
-                        <input class="formulario-login__input" name="userEmail" type="text" value="<?= $usuario['userEmail'] ?? "" ?>" required>
+                        <input class="formulario-login__input" name="userEmail" type="text" value="<?= $usuario->userEmail ?? "" ?>" required>
                         <span></span>
                         <label class="formulario-login__label">Usuario</label>
                     </div>

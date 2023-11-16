@@ -63,10 +63,10 @@ class UsuarioModel extends ActiveRecord{
         $_SESSION["login"] = true;
 
         if($this->isAdmin === "1"){
-            header("Location: " . $GLOBALS["raiz_sitio"]. "admin");
+            header("Location: " . $GLOBALS["raiz_sitio"]. "admin.php");
             exit;
         }else{
-            header("Location: " . $GLOBALS["raiz_sitio"]. "home");
+            header("Location: " . $GLOBALS["raiz_sitio"]. "home.php");
             exit;
         }
     }
