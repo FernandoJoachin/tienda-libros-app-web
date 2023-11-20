@@ -1,4 +1,5 @@
 <?php
+    $isActive = '--active';
     include __DIR__ ."/template/header.php";
 ?>
 <?php
