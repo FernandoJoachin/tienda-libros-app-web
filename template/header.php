@@ -12,7 +12,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="contenedor contenido-header">
+        <div class="contenido-header">
             <div class="header__barra">
                 <a href="#" class="logo">
                     <div class="logo__img">
