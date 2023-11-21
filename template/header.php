@@ -30,7 +30,7 @@
 
                 <nav class="navegacion">
                     <a href="catalogo.php" class="navegacion__enlace<?= $isActive ?? ""?>">Libros</a>
-                    <a href="#" class="navegacion__enlace">Contacto</a>
+                    <a href="contacto.php" class="navegacion__enlace<?= $isActive ?? ""?>">Contacto</a>
                 </nav>
 
                 <div class="header__iconos">
