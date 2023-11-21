@@ -1,4 +1,5 @@
 <?php
+    $page = "home";
     include __DIR__ ."/template/header.php";
 ?>
 <main class="home contenedor">

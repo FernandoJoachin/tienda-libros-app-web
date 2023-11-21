@@ -2,15 +2,15 @@
 @use "base/mixins" as mxn;
 
 .contacto {
-
     display: flex;
     justify-content: center;
-    background-color: #FFFFFF;
+    background-color: vr.$blanco;
+    margin-top: 3rem;
     font-family: vr.$fuente-principal;
 
     &__contenedor {
         width: 32rem;
-        background: white;
+        background: vr.$blanco;
         border-radius: 1rem;
         box-shadow: 0rem 0rem 2.5rem rgba(0,0,0,0.1);
 
