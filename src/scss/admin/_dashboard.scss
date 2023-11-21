@@ -8,7 +8,7 @@
     background-color: v.$gris-claro;
 
     &__header {
-        background-color: v.$gris-oscuro;
+        background-color: #C5801A;
         padding: 2rem;
 
     }
@@ -45,7 +45,7 @@
     }
 
     &__sidebar {
-        background-color: lighten(v.$gris-oscuro, 10%);
+        background-color: #FFC42A;
         width: 12rem;
     }
 
@@ -57,7 +57,7 @@
     }
 
     &__enlace {
-        color: lighten(v.$gris-oscuro, 50%);
+        color: v.$blanco;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -68,8 +68,8 @@
 
         &:hover,
         &--actual {
-            background-color: lighten(v.$gris-oscuro, 20%);
-            color: v.$blanco;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: brown;
         }
     }
 
@@ -94,15 +94,16 @@
     }
 
     &__contenedor-boton {
+        margin-bottom: 5rem;
+
         @include m.tablet{
             display: flex;
             justify-content: flex-end;
-            margin-bottom: 5rem
         }
     }
 
     &__boton {
-        @include m.boton(v.$azul, v.$blanco);
+        @include m.boton(#C5801A, v.$blanco);
         text-transform: uppercase;
         font-size: 1.4rem;
 

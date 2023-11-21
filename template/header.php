@@ -30,7 +30,7 @@
 
                 <nav class="navegacion">
                     <a href="#" class="navegacion__enlace--active">Libros</a>
-                    <a href="../formulario_contacto.php" class="navegacion__enlace">Contacto</a>
+                    <a href="contacto.php" class="navegacion__enlace">Contacto</a>
                 </nav>
 
                 <div class="header__iconos">
