@@ -29,8 +29,8 @@
                 </a>
 
                 <nav class="navegacion">
-                    <a href="catalogo.php" class="navegacion__enlace<?= $isActive ?? ""?>">Libros</a>
-                    <a href="contacto.php" class="navegacion__enlace<?= $isActive ?? ""?>">Contacto</a>
+                    <a href="catalogo.php" class="navegacion__enlace<?= ($page === 'catalogo' ) ? "--active" : ""?>">Libros</a>
+                    <a href="contacto.php" class="navegacion__enlace<?= ($page === 'contacto' ) ? "--active" : ""?>">Contacto</a>
                 </nav>
 
                 <div class="header__iconos">

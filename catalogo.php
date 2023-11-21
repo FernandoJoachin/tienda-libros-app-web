@@ -1,5 +1,5 @@
 <?php
-    $isActive = '--active';
+    $page = 'catalogo';
     include __DIR__ ."/template/header.php";
 ?>
 <?php

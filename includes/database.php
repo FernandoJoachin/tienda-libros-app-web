@@ -1,5 +1,5 @@
 <?php
-require_once "config.inc.php";
+require_once __DIR__ . "/../config.inc.php";
 $db = mysqli_connect(
     $GLOBALS["servidor"] ?? "",
     $GLOBALS["usuario"] ?? "",

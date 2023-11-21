@@ -1,5 +1,10 @@
 <?php
+    $page = 'contacto';
     include __DIR__ ."/template/header.php";
+?>
+<?php
+    $heroTitle = 'Contacto';
+    include __DIR__ ."/template/hero.php";
 ?>
 
 <main class="contacto">
