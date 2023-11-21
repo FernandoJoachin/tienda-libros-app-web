@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__ . '/../includes/funciones.php';
-    require_once __DIR__ . '/../includes/config.inc.php';
+    require_once __DIR__ . '/../config.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
