@@ -11,7 +11,8 @@
         <h1>Tabla Libros</h1>
 
         <div class="dashboard__contenedor-boton">
-            <a class="dashboard__boton" href="#">
+            <a class="dashboard__boton" href="crear.php" 
+                class="navegacion__enlace<?= ($page === 'crear' ) ? "--active" : ""?>">
                 <i class="fa-solid fa-circle-plus"></i>
                 Añadir Libro
             </a>
