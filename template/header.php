@@ -12,9 +12,9 @@
 </head>
 <body>
     <header class="header">
-        <div class="contenedor contenido-header">
+        <div class="contenido-header">
             <div class="header__barra">
-                <a href="#" class="logo">
+                <a href="home.php" class="logo">
                     <div class="logo__img">
                         <picture>
                             <source srcset="./build/img/logo.avif" type="image/avif">
@@ -29,8 +29,8 @@
                 </a>
 
                 <nav class="navegacion">
-                    <a href="#" class="navegacion__enlace--active">Libros</a>
-                    <a href="#" class="navegacion__enlace">Contacto</a>
+                    <a href="catalogo.php" class="navegacion__enlace<?= ($page === 'catalogo' ) ? "--active" : ""?>">Libros</a>
+                    <a href="contacto.php" class="navegacion__enlace<?= ($page === 'contacto' ) ? "--active" : ""?>">Contacto</a>
                 </nav>
 
                 <div class="header__iconos">

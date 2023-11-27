@@ -1,4 +1,5 @@
 <?php
+    $page = "home";
     include __DIR__ ."/template/header.php";
 ?>
 <main class="home contenedor">
@@ -13,7 +14,7 @@
                             <source srcset="./build/img/Boton-Buscar.avif" type="image/avif">
                             <source srcset="./build/img/Boton-Buscar.webp" type="image/webp">
                             <img class="home__boton-buscar" loading="lazy" src="./build/img/Boton-Buscar.png" alt="Buscar">
-                        </picture>
+                    </picture>
                         <picture>
                             <source srcset="./build/img/flecha.avif" type="image/avif">
                             <source srcset="./build/img/flecha-Buscar.webp" type="image/webp">

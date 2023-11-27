@@ -818,6 +818,175 @@ main {
   height: 100%;
 }
 
+.hero {
+  background-image: url(../img/Hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  padding: 5rem 0;
+}
+.hero__titulo {
+  font-size: 4.8rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .catalogo {
+    margin-top: 5rem;
+  }
+}
+.catalogo__grid {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .catalogo__grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .catalogo__grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.formulario-filtro {
+  margin: 5rem auto 2rem auto;
+  background-color: #FFFFFF;
+  border-radius: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  padding: 3rem 0;
+}
+@media (min-width: 1024px) {
+  .formulario-filtro {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90rem;
+    padding: 0;
+  }
+}
+.formulario-filtro__campo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+@media (min-width: 1024px) {
+  .formulario-filtro__campo:nth-child(1) {
+    padding-left: 3rem;
+  }
+}
+.formulario-filtro__campo:hover {
+  background-color: #f2f2f2;
+  border-radius: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.formulario-filtro__label {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.formulario-filtro__input {
+  border: none;
+  width: 100%;
+  color: #64748B;
+}
+.formulario-filtro__submit {
+  display: block;
+  height: 4rem;
+  border: none;
+  border-radius: 2rem;
+  background-image: radial-gradient(circle, #e39a2f 0%, #C5801A 100%);
+  padding: 0 4rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.libro {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .libro {
+    transition-property: transform;
+    transition-duration: 0.3s;
+  }
+  .libro:hover {
+    transform: scale(1.1);
+  }
+}
+.libro__contenedor-imagen {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.libro__imagen {
+  object-fit: fill;
+}
+.libro__titulo {
+  color: #1a1b15;
+  font-size: 2.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+.libro__contenido {
+  padding: 2rem;
+}
+.libro__autor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.libro__autor-imagen {
+  width: 3rem;
+  height: 3rem;
+}
+.libro__autor-nombre {
+  color: #6D737A;
+}
+.libro__precio {
+  font-size: 3rem;
+  color: #4A60A1;
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+.libro__enlace {
+  background-color: #C5801A;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  font-weight: 400;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.libro__enlace:hover {
+  background-color: #986314;
+  cursor: pointer;
+}
+
 .login {
   position: relative;
   margin: 0;
@@ -1023,7 +1192,7 @@ main {
   background-color: #F8FAFC;
 }
 .dashboard__header {
-  background-color: #1E293B;
+  background-color: #C5801A;
   padding: 2rem;
 }
 .dashboard__header-grid {
@@ -1062,7 +1231,7 @@ main {
   font-weight: 700;
 }
 .dashboard__submit--logout:hover {
-  color: #007df4;
+  color: #4A60A1;
   cursor: pointer;
 }
 .dashboard__grid {
@@ -1071,7 +1240,7 @@ main {
   overflow-y: auto;
 }
 .dashboard__sidebar {
-  background-color: #2f405d;
+  background-color: #FFC42A;
   width: 12rem;
 }
 .dashboard__menu {
@@ -1081,7 +1250,7 @@ main {
   gap: 2rem;
 }
 .dashboard__enlace {
-  color: #91a5c7;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1091,8 +1260,8 @@ main {
   border-radius: 1rem;
 }
 .dashboard__enlace:hover, .dashboard__enlace--actual {
-  background-color: #40587f;
-  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: brown;
 }
 .dashboard__icono {
   font-size: 2rem;
@@ -1113,15 +1282,17 @@ main {
     padding: 1rem 5rem 3rem 5rem;
   }
 }
+.dashboard__contenedor-boton {
+  margin-bottom: 5rem;
+}
 @media (min-width: 768px) {
   .dashboard__contenedor-boton {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 5rem;
   }
 }
 .dashboard__boton {
-  background-color: #007df4;
+  background-color: #C5801A;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
   font-size: 1.8rem;
@@ -1136,7 +1307,7 @@ main {
   font-size: 1.4rem;
 }
 .dashboard__boton:hover {
-  background-color: #0063c1;
+  background-color: #986314;
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -1218,15 +1389,18 @@ main {
   border-collapse: collapse;
 }
 .table__thead {
-  background-color: #1E293B;
+  background-color: #C5801A;
   color: #FFFFFF;
 }
 .table__th {
   padding: 1rem;
-  text-align: left;
+  text-align: center;
+}
+.table__tr {
+  text-align: center;
 }
 .table__tr:nth-of-type(even) {
-  background-color: #d4e1ed;
+  background-color: #ffe7aa;
 }
 .table__td, .table__td--acciones {
   padding: 1.5rem 1rem;
@@ -1244,12 +1418,147 @@ main {
   font-weight: 700;
 }
 .table__accion--editar {
-  color: #007df4;
+  color: #4A60A1;
 }
 .table__accion--eliminar {
   color: rgb(169, 0, 0);
 }
 .table__accion:hover {
   cursor: pointer;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  background-color: #FFFFFF;
+  margin-top: 3rem;
+  font-family: "Poppins", sans-serif;
+}
+.contacto__contenedor {
+  width: 32rem;
+  background: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 2.5rem rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 768px) {
+  .contacto__contenedor {
+    width: 40rem;
+  }
+}
+.contacto__titulo {
+  color: #C5801A;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 0;
+  border-bottom: 1px solid silver;
+}
+
+.formulario-contacto {
+  padding: 0 4rem;
+  box-sizing: border-box;
+}
+.formulario-contacto__campo {
+  position: relative;
+  border-bottom: 0.2rem solid #adadad;
+  margin: 3rem 0;
+}
+.formulario-contacto__campo span::before {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 0%;
+  height: 0.2rem;
+  background: #2691d9;
+  transition: 0.4s;
+}
+.formulario-contacto__campo input:focus ~ label,
+.formulario-contacto__campo input:valid ~ label {
+  top: -0.5rem;
+  color: #2691d9;
+}
+.formulario-contacto__campo input:focus ~ span::before,
+.formulario-contacto__campo input:valid ~ span::before {
+  width: 100%;
+}
+.formulario-contacto__input {
+  width: 100%;
+  padding: 0 0.5rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  border: none;
+  background: none;
+  outline: none;
+}
+.formulario-contacto__input--submit {
+  width: 100%;
+  height: 5rem;
+  border: 0px solid #e9f4fb;
+  background: #C5801A;
+  border-radius: 2.5rem;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+  margin-bottom: 40px;
+}
+.formulario-contacto__input--submit:hover {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  transition: 0.5s;
+}
+.formulario-contacto__label {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.formulario-contacto__textarea {
+  width: 100%;
+  padding: 1rem 1rem;
+  height: 10rem;
+  font-size: 1.6rem;
+  border: 0.2rem solid #adadad;
+  background: none;
+  outline: none;
+  margin-top: 20px;
+}
+.formulario-contacto__label-textarea {
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.formulario-contacto__campo-textarea {
+  position: relative;
+  margin: 3rem 0;
+}
+.formulario-contacto__enlace {
+  color: #a6a6a6;
+  cursor: pointer;
+  font-size: 80%;
+  text-decoration: none;
+}
+.formulario-contacto__enlace:hover {
+  text-decoration: underline;
+}
+
+.invalid-feedback {
+  margin-top: -2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: rgb(169, 0, 0);
+  text-align: right;
 }
 /*# sourceMappingURL=app.css.map */
