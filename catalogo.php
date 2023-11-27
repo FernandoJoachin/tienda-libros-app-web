@@ -29,6 +29,7 @@
                 <input type="submit" class="formulario-filtro__submit" value="Enviar">
             </div>
         </form>
+
         <div class="catalogo__grid contenedor">
             <a href="libroIndividual" class="libro">
                 <div class="libro__contenedor-imagen">
