@@ -5,7 +5,7 @@ class UsuarioModel extends ActiveRecord{
     protected static $nombreTabla = "users";
     protected static $columnasDB = ["userId","userFirstName","userLastName", "userEmail", "userPassword", "isAdmin"];
 
-    public $userId;
+    public $id;
     public $userFirstName;
     public $userLastName; 
     public $userEmail; 
@@ -14,7 +14,7 @@ class UsuarioModel extends ActiveRecord{
 
     public function __construct($args = [])
     {
-        $this->userId = $args["id"] ?? null;
+        $this->id = $args["userId"] ?? null;
         $this->userFirstName = $args["userFirstName"] ?? "";
         $this->userLastName = $args["userLastName"] ?? "";
         $this->userEmail = $args["userEmail"] ?? "";

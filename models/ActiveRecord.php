@@ -38,9 +38,9 @@ class ActiveRecord{
 
     public function guardar(){
         if(!is_null($this->id)){
-            $this->actualizar();
+            return $this->actualizar();
         }else{
-            $this->crear();
+            return $this->crear();
         }
     }
 
@@ -56,12 +56,7 @@ class ActiveRecord{
         $query = "UPDATE " . static::$nombreTabla . " SET {$setInfo}";
         $query .= " WHERE id = '" . self::$db->escape_string($this->id) . "'";
         $query .= " LIMIT 1";
-        $resultado = self::$db->query($query);
-        
-        if($resultado){
-            //Redireccionar al usuario;
-            header("Location: /admin?resultado=2");
-        }
+        return $resultado = self::$db->query($query);
     }
 
     public function crear(){
@@ -70,7 +65,7 @@ class ActiveRecord{
         $keys = join(", ", array_keys($atributos));
         $values = join("', '", array_values($atributos));
         $query = "INSERT INTO " . static::$nombreTabla . " ({$keys}) VALUES ('{$values}')";
-        $resultado = self::$db->query($query);
+        return $resultado = self::$db->query($query);
 
         if($resultado){
             //Redireccionar al usuario;
@@ -78,18 +73,10 @@ class ActiveRecord{
         }
     }
 
-    public function eliminar(String $tipo = ""){
+    public function eliminar(){
         //Eliminar registro
         $query = "DELETE FROM " . static::$nombreTabla . " WHERE id="  . self::$db->escape_string($this->id) . " LIMIT 1";
-        $resultado = self::$db->query($query);
-
-        if($resultado){
-            if($tipo === "propiedad"){
-                $this->borrarImagen();
-            }
-            //Redireccionar al usuario;
-            header("Location: /admin?resultado=3");
-        }
+        return $resultado = self::$db->query($query);
     }
 
     //Sanitiza los atributos de la clase
@@ -142,9 +129,10 @@ class ActiveRecord{
     //Borrar Imagen
     public function borrarImagen(){
         //Comprobar si existe el archivo
-        $existeArchivo = file_exists(CARPETA_IMG . $this->imagen);
+        $carpetaImg = $_SERVER["DOCUMENT_ROOT"] . "/tienda-libros-app-web/build/imagenes/";
+        $existeArchivo = file_exists($carpetaImg . $this->imagen);
         if($existeArchivo){
-            unlink(CARPETA_IMG . $this->imagen);
+            unlink($carpetaImg . $this->imagen);
         }
     }
 
