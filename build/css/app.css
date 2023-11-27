@@ -519,7 +519,7 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 3rem;
-  margin-top: 3rem;
+  margin-top: 6rem;
   background-color: #C5801A;
 }
 @media (min-width: 768px) {
@@ -895,20 +895,17 @@ main {
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 1024px) {
   .formulario-filtro__campo:nth-child(1) {
     padding-left: 3rem;
   }
 }
-.formulario-filtro__campo:hover {
-  background-color: #f2f2f2;
-  border-radius: 5rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
 .formulario-filtro__label {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 900;
+  border-bottom: 10rem;
 }
 .formulario-filtro__input {
   border: none;
@@ -926,6 +923,11 @@ main {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2rem;
+  transition: 0.3s;
+}
+.formulario-filtro__submit:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
 }
 
 .libro {
@@ -941,7 +943,7 @@ main {
     transition-duration: 0.3s;
   }
   .libro:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 .libro__contenedor-imagen {
