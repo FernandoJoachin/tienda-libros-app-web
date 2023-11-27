@@ -715,17 +715,8 @@ main {
 
 .contenedor-carrito {
   display: flex;
-  flex-direction: row;
   align-content: center;
   justify-content: center;
-}
-@media (min-width: 1024px) {
-  .contenedor-carrito {
-    flex-direction: row-reverse;
-    justify-content: end;
-    align-content: end;
-    transform: translateY(-50%);
-  }
 }
 
 .contenedor-cantidad {
@@ -808,9 +799,32 @@ main {
   font-weight: bold;
 }
 
-.contenedor-boton {
-  display: grid;
-  place-items: center;
+.formulario-carrito-compras {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formulario-carrito-compras__submit {
+  background-color: #C5801A;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  max-width: 20rem;
+  gap: 1rem;
+  font-weight: 400;
+  border-radius: 1rem;
+}
+.formulario-carrito-compras__submit:hover {
+  background-color: #986314;
+  cursor: pointer;
 }
 
 .boton_enviar {

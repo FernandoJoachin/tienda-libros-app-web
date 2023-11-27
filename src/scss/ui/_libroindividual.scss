@@ -79,16 +79,8 @@ main{
 
 .contenedor-carrito{
     display: flex;
-    flex-direction: row;
     align-content: center;
     justify-content: center;
-
-    @include mxn.desktop{
-        flex-direction: row-reverse;
-        justify-content: end;
-        align-content: end;
-        transform: translateY(-50%);
-    }
 }
 
 .contenedor-cantidad{
@@ -176,9 +168,19 @@ main{
     }
 }
 
-.contenedor-boton{
-    display: grid;
-    place-items: center;
+.formulario-carrito-compras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__submit{
+        @include mxn.boton(vr.$primario,vr.$blanco);
+        max-width: 20rem;
+        gap: 1rem;
+        font-weight: 400;
+        border-radius: 1rem;
+    }
 }
 
 .boton_enviar{
