@@ -1203,7 +1203,7 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #F8FAFC;
+  background-color: #f4f7fa;
 }
 .dashboard__header {
   background-color: #C5801A;
@@ -1446,7 +1446,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
   font-family: "Poppins", sans-serif;
 }
 .crear__contenedor {
