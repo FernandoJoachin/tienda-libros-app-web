@@ -29,61 +29,31 @@
                 <input type="submit" class="formulario-filtro__submit" value="Enviar">
             </div>
         </form>
+
+        <?php 
+            require_once __DIR__ . '/controllers/BookController/obtenerLibros.php';
+            $libros = obtenerLibros();
+        ?>
+
         <div class="catalogo__grid contenedor">
-            <a href="libroIndividual" class="libro">
-                <div class="libro__contenedor-imagen">
-                    <picture>
-                        <source srcset="./build/img/BookDefault.avif" type="image/avif">
-                        <source srcset="./build/img/BookDefault.webp" type="image/webp">
-                        <img class="libro__imagen" loading="lazy" src="./build/img/BookDefault.png" alt="BookDefault">
-                    </picture>
-                </div>
-                <div class="libro__contenido">
-                    <h2 class="libro__titulo">El fin del Caos</h2>
-                    <div class="libro__autor">
-                        <img src="./build/img/User_Square.svg" alt="Autor" class="libro__autor-imagen">
-                        <p  class="libro__autor-nombre">Jorge Castero</p>
+            <?php foreach($libros as $libro){ ?>
+                <a href="libroIndividual" class="libro">
+                    <div class="libro__contenedor-imagen">
+                        <picture>
+                            <img class="libro__imagen" loading="lazy" src="./build/imagenes/<?php echo $libro->imagen ?>" alt="BookDefault">
+                        </picture>
                     </div>
-                    <p class="libro__precio">$300.00</p>
-                </div>
-                <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-            </a><!--libro-->
-            <a href="libroIndividual" class="libro">
-                <div class="libro__contenedor-imagen">
-                    <picture>
-                        <source srcset="./build/img/BookDefault.avif" type="image/avif">
-                        <source srcset="./build/img/BookDefault.webp" type="image/webp">
-                        <img class="libro__imagen" loading="lazy" src="./build/img/BookDefault.png" alt="BookDefault">
-                    </picture>
-                </div>
-                <div class="libro__contenido">
-                    <h2 class="libro__titulo">El fin del Caos</h2>
-                    <div class="libro__autor">
-                        <img src="./build/img/User_Square.svg" alt="Autor" class="libro__autor-imagen">
-                        <p  class="libro__autor-nombre">Jorge Castero</p>
+                    <div class="libro__contenido">
+                        <h2 class="libro__titulo"><?= $libro->bookTitle?></h2>
+                        <div class="libro__autor">
+                            <img src="./build/img/User_Square.svg" alt="Autor" class="libro__autor-imagen">
+                            <p  class="libro__autor-nombre"><?= $libro->bookAuthor?></p>
+                        </div>
+                        <p class="libro__precio">$<?= $libro->bookPrice?></p>
                     </div>
-                    <p class="libro__precio">$300.00</p>
-                </div>
-                <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-            </a><!--libro-->
-            <a href="libroIndividual" class="libro">
-                <div class="libro__contenedor-imagen">
-                    <picture>
-                        <source srcset="./build/img/BookDefault.avif" type="image/avif">
-                        <source srcset="./build/img/BookDefault.webp" type="image/webp">
-                        <img class="libro__imagen" loading="lazy" src="./build/img/BookDefault.png" alt="BookDefault">
-                    </picture>
-                </div>
-                <div class="libro__contenido">
-                    <h2 class="libro__titulo">El fin del Caos</h2>
-                    <div class="libro__autor">
-                        <img src="./build/img/User_Square.svg" alt="Autor" class="libro__autor-imagen">
-                        <p  class="libro__autor-nombre">Jorge Castero</p>
-                    </div>
-                    <p class="libro__precio">$300.00</p>
-                </div>
-                <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-            </a><!--libro-->
+                    <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                </a><!--libro-->
+            <?php };?>
         </div>
     </div>
 </main>

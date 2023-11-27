@@ -20,6 +20,7 @@
         </div>
         <p class="footer__copyright text-center degradado"> Booke - Todos los derechos reservados &copy; 2023</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script src="./build/js/main.min.js"></script>
 </body>
 </html>

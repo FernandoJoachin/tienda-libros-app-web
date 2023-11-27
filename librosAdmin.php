@@ -16,7 +16,10 @@
                 Añadir Libro
             </a>
         </div>
-
+        <?php 
+            require_once __DIR__ . '/controllers/BookController/obtenerLibros.php';
+            $libros = obtenerLibros();
+        ?>
         <table id="books-table" class="table">
             <thead class="table__thead">
                 <tr>
@@ -25,25 +28,27 @@
                     <th scope="col" class="table__th">Autor</th>
                     <th scope="col" class="table__th">Edición</th>
                     <th scope="col" class="table__th">Categoría</th>
+                    <th scope="col" class="table__th">Precio</th>
                     <th scope="col" class="table__th">Stock</th>
                     <th scope="col" class="table__th">Acciones</th>
                 </tr>
             </thead>
 
             <tbody class="table__tbody">
-                <?php for($i=0; $i<5; $i++){ ?>
+                <?php foreach($libros as $libro){ ?>
                     
                     <tr class="table__tr">
-                        <td class="table__td">978-0061122415</td>
-                        <td class="table__td">Cien años de soledad</td>
-                        <td class="table__td">Gabriel García Márquez</td>
-                        <td class="table__td">1ra Edición</td>
-                        <td class="table__td">Ficción latinoamericana</td>
-                        <td class="table__td">25</td>
+                        <td class="table__td"><?= $libro->bookIsbn?></td>
+                        <td class="table__td"><?= $libro->bookTitle?></td>
+                        <td class="table__td"><?= $libro->bookAuthor?></td>
+                        <td class="table__td"><?= $libro->bookEdition?></td>
+                        <td class="table__td"><?= $libro->bookCategory?></td>
+                        <td class="table__td">$<?= $libro->bookPrice?></td>
+                        <td class="table__td"><?= $libro->bookStock?></td>
                         <td class="table__td--acciones">
-                            <a class="table__accion table__accion--editar" href="editar.php">
-                            <i class="fa-solid fa-user-pen"></i>
-                            Editar
+                            <a class="table__accion table__accion--editar" href="<?= $GLOBALS["raiz_sitio"] . "editar.php?id=" . $libro->id ?>">
+                                <i class="fa-solid fa-user-pen"></i>
+                                Editar
                             </a>
 
                             <button class="table__accion table__accion--ver">
@@ -51,62 +56,8 @@
                                 Ver
                             </button>
 
-                            <form method="POST" action="#" class="table__formulario">
-                                <input type="hidden" name="id" value="#">
-                                <button class="table__accion table__accion--eliminar" type="submit">
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                    Eliminar
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr class="table__tr">
-                        <td class="table__td">978-0743273565</td>
-                        <td class="table__td">To Kill a Mockingbird</td>
-                        <td class="table__td">Harper Lee</td>
-                        <td class="table__td">2da Edición</td>
-                        <td class="table__td">Novela clásica</td>
-                        <td class="table__td">20</td>
-                        <td class="table__td--acciones">
-                            <a class="table__accion table__accion--editar" href="editar.php">
-                            <i class="fa-solid fa-user-pen"></i>
-                            Editar
-                            </a>
-
-                            <button class="table__accion table__accion--ver">
-                                <i class="fa-solid fa-eye"></i>
-                                Ver
-                            </button>
-
-                            <form method="POST" action="#" class="table__formulario">
-                                <input type="hidden" name="id" value="#">
-                                <button class="table__accion table__accion--eliminar" type="submit">
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                    Eliminar
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr class="table__tr">
-                        <td class="table__td">978-0553382563</td>
-                        <td class="table__td">The Da Vinci Code</td>
-                        <td class="table__td">Dan Brown</td>
-                        <td class="table__td">3ra Edición</td>
-                        <td class="table__td">Thriller</td>
-                        <td class="table__td">30</td>
-                        <td class="table__td--acciones">
-                            <a class="table__accion table__accion--editar" href="editar.php">
-                            <i class="fa-solid fa-user-pen"></i>
-                            Editar
-                            </a>
-
-                            <button class="table__accion table__accion--ver">
-                                <i class="fa-solid fa-eye"></i>
-                                Ver
-                            </button>
-
-                            <form method="POST" action="#" class="table__formulario">
-                                <input type="hidden" name="id" value="#">
+                            <form method="POST" action="./controllers/BookController/eliminarLibro.php" class="table__formulario">
+                                <input type="hidden" name="id" value="<?=$libro->id?>">
                                 <button class="table__accion table__accion--eliminar" type="submit">
                                     <i class="fa-solid fa-circle-xmark"></i>
                                     Eliminar
@@ -123,6 +74,7 @@
                     <th scope="col" class="table__th">Autor</th>
                     <th scope="col" class="table__th">Edición</th>
                     <th scope="col" class="table__th">Categoría</th>
+                    <th scope="col" class="table__th">Precio</th>
                     <th scope="col" class="table__th">Stock</th>
                     <th scope="col" class="table__th">Acciones</th>
                 </tr>
@@ -131,6 +83,12 @@
         <!-- table -->
     </main>
 </div>
+<?php
+    $respuesta = $_GET['respuesta'] ?? null;
+    if ($respuesta) {
+        ?>
+    <div id="alertElement" data-response="<?= htmlspecialchars(json_encode($respuesta)) ?>"></div>
+<?php } ?>
 <?php
     include __DIR__ ."/template/footer-admin.php";
 ?>

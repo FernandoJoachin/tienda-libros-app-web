@@ -14,40 +14,46 @@ include __DIR__ . "/template/header-admin.php";
             <div class="crear__contenedor">
 
 
-                <form class="formulario-crear">
+                <form class="formulario-crear" method="POST" action="./controllers/BookController/crearLibro.php" enctype="multipart/form-data">
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="texto-isbn" type="text" value="" required>
+                        <input class="formulario-crear__input" name="bookIsbn" type="text" value="" required>
                         <span></span>
                         <label class="formulario-crear__label">ISBN</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="texto-título" type="text" value="" required>
+                        <input class="formulario-crear__input" name="bookTitle" type="text" value="" required>
                         <span></span>
                         <label class="formulario-crear__label">Título</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="texto-autor" type="text" value="" required>
+                        <input class="formulario-crear__input" name="bookAuthor" type="text" value="" required>
                         <span></span>
                         <label class="formulario-crear__label">Autor</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="edición" type="number" value="" required>
+                        <input class="formulario-crear__input" name="bookEdition" type="text" value="" required>
                         <span></span>
                         <label class="formulario-crear__label">Edición</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="texto-categoría" type="text" value="" required>
+                        <input class="formulario-crear__input" name="bookCategory" type="text" value="" required>
                         <span></span>
                         <label class="formulario-crear__label">Categoría</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="stock" type="number" value="" required>
+                        <input class="formulario-crear__input" name="bookPrice" type="number" value="" required>
+                        <span></span>
+                        <label class="formulario-crear__label">Precio</label>
+                    </div>
+
+                    <div class="formulario-crear__campo">
+                        <input class="formulario-crear__input" name="bookStock" type="number" value="" required>
                         <span></span>
                         <label class="formulario-crear__label">Stock</label>
                     </div>
@@ -55,7 +61,7 @@ include __DIR__ . "/template/header-admin.php";
                     <div class="formulario-crear__imagen">
                         <label class="formulario-crear__label--imagen">Imagen</label>
                         <br>
-                        <input class="formulario-crear__input--imagen" type="file" name="Imagen" accept="image/*" required alt="">
+                        <input class="formulario-crear__input--imagen" type="file" name="bookImage" accept="image/*" required alt="">
                         <span></span>
                     </div>
 
@@ -68,7 +74,7 @@ include __DIR__ . "/template/header-admin.php";
                 </form>
             </div>
 
-            <button class="crear__regresar" onclick="history.back()">Regresar</button>
+            <a class="crear__regresar" href="librosAdmin.php">Regresar</a>
 
         </section>
     </main>
