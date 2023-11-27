@@ -30,7 +30,7 @@
             </div>
         </form>
         <div class="catalogo__grid contenedor">
-            <div class="libro">
+            <a href="libroIndividual" class="libro">
                 <div class="libro__contenedor-imagen">
                     <picture>
                         <source srcset="./build/img/BookDefault.avif" type="image/avif">
@@ -47,8 +47,8 @@
                     <p class="libro__precio">$300.00</p>
                 </div>
                 <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-            </div><!--libro-->
-            <div class="libro">
+            </a><!--libro-->
+            <a href="libroIndividual" class="libro">
                 <div class="libro__contenedor-imagen">
                     <picture>
                         <source srcset="./build/img/BookDefault.avif" type="image/avif">
@@ -65,8 +65,8 @@
                     <p class="libro__precio">$300.00</p>
                 </div>
                 <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-            </div><!--libro-->
-            <div class="libro">
+            </a><!--libro-->
+            <a href="libroIndividual" class="libro">
                 <div class="libro__contenedor-imagen">
                     <picture>
                         <source srcset="./build/img/BookDefault.avif" type="image/avif">
@@ -83,7 +83,7 @@
                     <p class="libro__precio">$300.00</p>
                 </div>
                 <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-            </div><!--libro-->
+            </a><!--libro-->
         </div>
     </div>
 </main>

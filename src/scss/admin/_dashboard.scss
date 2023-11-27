@@ -5,7 +5,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: v.$gris-claro;
+    background-color: darken(v.$gris-claro, 1%);
 
     &__header {
         background-color: #C5801A;

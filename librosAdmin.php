@@ -11,7 +11,7 @@
         <h1>Tabla Libros</h1>
 
         <div class="dashboard__contenedor-boton">
-            <a class="dashboard__boton" href="#">
+            <a class="dashboard__boton" href="crear.php">
                 <i class="fa-solid fa-circle-plus"></i>
                 Añadir Libro
             </a>
@@ -41,10 +41,15 @@
                         <td class="table__td">Ficción latinoamericana</td>
                         <td class="table__td">25</td>
                         <td class="table__td--acciones">
-                            <a class="table__accion table__accion--editar" href="#">
+                            <a class="table__accion table__accion--editar" href="editar.php">
                             <i class="fa-solid fa-user-pen"></i>
                             Editar
                             </a>
+
+                            <button class="table__accion table__accion--ver">
+                                <i class="fa-solid fa-eye"></i>
+                                Ver
+                            </button>
 
                             <form method="POST" action="#" class="table__formulario">
                                 <input type="hidden" name="id" value="#">
@@ -63,10 +68,15 @@
                         <td class="table__td">Novela clásica</td>
                         <td class="table__td">20</td>
                         <td class="table__td--acciones">
-                            <a class="table__accion table__accion--editar" href="#">
+                            <a class="table__accion table__accion--editar" href="editar.php">
                             <i class="fa-solid fa-user-pen"></i>
                             Editar
                             </a>
+
+                            <button class="table__accion table__accion--ver">
+                                <i class="fa-solid fa-eye"></i>
+                                Ver
+                            </button>
 
                             <form method="POST" action="#" class="table__formulario">
                                 <input type="hidden" name="id" value="#">
@@ -85,10 +95,15 @@
                         <td class="table__td">Thriller</td>
                         <td class="table__td">30</td>
                         <td class="table__td--acciones">
-                            <a class="table__accion table__accion--editar" href="#">
+                            <a class="table__accion table__accion--editar" href="editar.php">
                             <i class="fa-solid fa-user-pen"></i>
                             Editar
                             </a>
+
+                            <button class="table__accion table__accion--ver">
+                                <i class="fa-solid fa-eye"></i>
+                                Ver
+                            </button>
 
                             <form method="POST" action="#" class="table__formulario">
                                 <input type="hidden" name="id" value="#">
