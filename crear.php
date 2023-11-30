@@ -77,6 +77,13 @@ include __DIR__ . "/template/header-admin.php";
             <a class="crear__regresar" href="librosAdmin.php">Regresar</a>
 
         </section>
+        <div id="modalAlerta" class="modalAlerta">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
+                <p id="modal-message"></p>
+            </div>
+        </div>
     </main>
 </div>
 
