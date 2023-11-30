@@ -37,7 +37,7 @@
 
         <div class="catalogo__grid contenedor">
             <?php foreach($libros as $libro){ ?>
-                <a href="libroIndividual" class="libro">
+                <a href="libroIndividual.php" class="libro">
                     <div class="libro__contenedor-imagen">
                         <picture>
                             <img class="libro__imagen" loading="lazy" src="./build/imagenes/<?php echo $libro->imagen ?>" alt="BookDefault">

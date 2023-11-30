@@ -1,6 +1,8 @@
 <?php
     require_once __DIR__ . '/../includes/funciones.php';
     require_once __DIR__ . '/../config.inc.php';
+    include_once __DIR__ . '/../controllers/LoginController/validarSesion.php';
+    validarAdministrador();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,16 +26,16 @@
 <body class="dashboard">
     <header class="dashboard__header">
         <div class="dashboard__header-grid">
-            <a href="/">        
+            <a href="admin.php">        
                 <h2 class="dashboard__logo">
                     Booke
                 </h2>
             </a>
 
+            <p class="dashboard__usuario">Usuario: <?= $_SESSION["name"]?></p>
+
             <nav class="dashboard__nav">
-                <form method="POST" action="/logout" class="dashboard__form">
-                    <input type="submit" value="Cerrar Sesión" class="dashboard__submit--logout">
-                </form>
+                <a href="./controllers/LoginController/cerrarSesion.php" class="dashboard__cerrar-sesion">Cerrar Sesión</a>
             </nav>
         </div>
     </header>

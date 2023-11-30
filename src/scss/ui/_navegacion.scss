@@ -23,3 +23,10 @@
         }
     }
 }
+
+.navegacion-hide{
+    opacity: 0;
+    @include mxn.tablet{
+        opacity: 1;
+    }
+}
