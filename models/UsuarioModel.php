@@ -57,8 +57,9 @@ class UsuarioModel extends ActiveRecord{
     public function autenticar(){
 
         //Llenar el arreglo de session
+        session_start();
         $_SESSION["email"] = $this->userEmail;
-        $_SESSION["name"] = $this->userFirstName . $this->userLastName;
+        $_SESSION["name"] = $this->userFirstName . " " . $this->userLastName;
         $_SESSION["isAdmin"] = $this->isAdmin;
         $_SESSION["login"] = true;
 

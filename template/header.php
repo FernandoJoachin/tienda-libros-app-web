@@ -1,3 +1,9 @@
+<?php 
+    require_once __DIR__ . '/../includes/funciones.php';
+    require_once __DIR__ . '/../config.inc.php';
+    include_once __DIR__ . '/../controllers/LoginController/validarSesion.php';
+    validarSesion();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +43,19 @@
 
                 <div class="header__iconos">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <i class="fa-solid fa-circle-user"></i>
+                    <div class="header__usuario">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <div class="dropwdown">
+                            <ul class="dropwdown__contenido">
+                                <li class="dropwdown__elemento">
+                                    <p class="dropwdown__usuario">Usuario: <?= $_SESSION["name"]?></p>
+                                </li>
+                                <li class="dropwdown__elemento">
+                                    <a href="./controllers/LoginController/cerrarSesion.php" class="dropwdown__cerrar-sesion"><i class="fa-solid fa-door-open"></i> Cerrar Sesion</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>  
         </div>

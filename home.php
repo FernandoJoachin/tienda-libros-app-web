@@ -9,7 +9,7 @@
                 <p class="home__titulo">Compra libros por el mejor <span class="home__titulo-span">precio</span></p>
                 <p class="home__subtitulo">¡Descubre los mejores precios para comprar libros!</p>
                 <div class="home__buscador">
-                    <a href="#" class="home__buscador-enlace">
+                    <a href="catalogo.php" class="home__buscador-enlace">
                         <picture>
                             <source srcset="./build/img/Boton-Buscar.avif" type="image/avif">
                             <source srcset="./build/img/Boton-Buscar.webp" type="image/webp">

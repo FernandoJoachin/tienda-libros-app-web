@@ -7,7 +7,7 @@
     ?>
 
     <main class="dashboard__contenido">
-        <h1>Admin</h1>
+        <h1 style="text-align: center;">Bienvenido al Panel de Administración</h1>
     </main>
 </div>
 <?php
