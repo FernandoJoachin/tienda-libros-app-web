@@ -18,6 +18,14 @@
             @include mxn.grid(3,4rem);
         }
     }
+
+    
+    &__titulo-no-registro{
+        text-align: center;
+        grid-column: 1 / 4;
+        color: #6D737A;
+        opacity: 0.5;
+    }
 }
 .formulario-filtro{
     margin: 5rem auto 2rem auto;
@@ -141,6 +149,12 @@
         text-align: center;
         margin: 1rem 0 0 0;
     }
+
+    &__categoria{
+        color: #6D737A;
+        text-align: center;
+    }
+
 
     &__enlace{
         @include mxn.boton(vr.$primario,vr.$blanco);

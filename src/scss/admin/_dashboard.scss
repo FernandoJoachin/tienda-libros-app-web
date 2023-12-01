@@ -46,12 +46,12 @@
     &__grid {
         display: flex;
         flex: 1;
-        overflow-y: auto; 
     }
 
     &__sidebar {
         background-color: #FFC42A;
-        width: 12rem;
+        max-width: 15rem;
+        overflow-y: auto; 
     }
 
     &__menu {

@@ -30,6 +30,12 @@ class ActiveRecord{
         return array_shift( $resultado ) ;
     }
 
+    public static function whereAll($columna, $valor) {
+        $query = "SELECT * FROM " . static::$nombreTabla . " WHERE {$columna} = '{$valor}'";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
     public static function get($cantidad){
         $query = "SELECT * FROM " . static::$nombreTabla . " LIMIT " . $cantidad; //static::$variable - Permite que el método acceda a la propiedad estática de la clase en la que se encuentra la línea de código
         $resultado = self::consultarSQL($query);

@@ -40,6 +40,27 @@
     }
 }
 
+.dropwdown-sidebar{
+    display: none;
+    
+    &__contenido{
+        text-align: left;
+        padding-left: 1rem;
+        color: vr.$blanco;
+    }
+    
+    &__elemento{
+        list-style-type: georgian;
+        font-size: 1.5rem;
+        text-decoration: underline;
+        margin-bottom: 1.5rem;
+
+        a{
+            color: vr.$blanco;
+        }
+    }
+}
+
 .dropwdown-show{
     display: block;
 }

@@ -888,6 +888,12 @@ main {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.catalogo__titulo-no-registro {
+  text-align: center;
+  grid-column: 1/4;
+  color: #6D737A;
+  opacity: 0.5;
+}
 
 .formulario-filtro {
   margin: 5rem auto 2rem auto;
@@ -997,6 +1003,10 @@ main {
   text-align: center;
   margin: 1rem 0 0 0;
 }
+.libro__categoria {
+  color: #6D737A;
+  text-align: center;
+}
 .libro__enlace {
   background-color: #C5801A;
   padding: 1.5rem 4rem;
@@ -1054,6 +1064,24 @@ main {
   border: none;
   background: none;
   cursor: pointer;
+  color: #FFFFFF;
+}
+
+.dropwdown-sidebar {
+  display: none;
+}
+.dropwdown-sidebar__contenido {
+  text-align: left;
+  padding-left: 1rem;
+  color: #FFFFFF;
+}
+.dropwdown-sidebar__elemento {
+  list-style-type: georgian;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-bottom: 1.5rem;
+}
+.dropwdown-sidebar__elemento a {
   color: #FFFFFF;
 }
 
@@ -1315,11 +1343,11 @@ main {
 .dashboard__grid {
   display: flex;
   flex: 1;
-  overflow-y: auto;
 }
 .dashboard__sidebar {
   background-color: #FFC42A;
-  width: 12rem;
+  max-width: 15rem;
+  overflow-y: auto;
 }
 .dashboard__menu {
   padding: 1rem;
@@ -1513,7 +1541,7 @@ main {
   font-family: "Poppins", sans-serif;
 }
 .crear__contenedor {
-  width: 40rem;
+  max-width: 40rem;
   background: #FFFFFF;
   border-radius: 1rem;
   box-shadow: 0rem 0rem 2.5rem rgba(0, 0, 0, 0.1);
