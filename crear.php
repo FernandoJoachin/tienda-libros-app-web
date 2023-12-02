@@ -14,7 +14,7 @@ include __DIR__ . "/template/header-admin.php";
             <div class="crear__contenedor">
 
 
-                <form class="formulario-crear" method="POST" action="./controllers/BookController/crearLibro.php" enctype="multipart/form-data">
+                <form id="crear-form" class="formulario-crear" method="POST" action="./controllers/BookController/crearLibro.php" enctype="multipart/form-data">
 
                     <div class="formulario-crear__campo">
                         <input class="formulario-crear__input" name="bookIsbn" type="text" value="">

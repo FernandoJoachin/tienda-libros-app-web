@@ -43,9 +43,28 @@ function validarNumeroNoNegativo(valor, mensaje) {
     return true;
 }
 
+function validarCorreoElectronico(correo, mensaje) {
+    const regexCorreo = /\S+@\S+\.\S+/;
+    if (!regexCorreo.test(correo)) {
+        mostrarModal(mensaje);
+        return false;
+    }
+    return true;
+}
+
+function validarNoNumeros(valor, mensaje) {
+    const contieneNumeros = /\d/.test(valor);
+    if (contieneNumeros) {
+        mostrarModal(mensaje);
+        return false;
+    }
+    return true;
+}
 
 
-function validarFormulario() {
+
+
+function validarFormularioCrear() {
     // Obtener valores de los campos
     const isbn = document.getElementsByName('bookIsbn')[0].value;
     const titulo = document.getElementsByName('bookTitle')[0].value;
@@ -69,15 +88,47 @@ function validarFormulario() {
         !validarNumeroNoNegativo(stock, 'El stock debe ser un número positivo.') ||
         !validarCampoObligatorio(imagen, 'Por favor, selecciona una imagen.')
     ) {
-
         return false;
     }
-
     return true;
 }
 
-document.getElementsByClassName('formulario-crear')[0].addEventListener('submit', function (event) {
-    if (!validarFormulario()) {
+function validarFormularioContacto() {
+    // Obtener valores de los campos
+    const cnombre = document.getElementsByName('texto-nombre')[0].value;
+    const capellido = document.getElementsByName('texto-apellido')[0].value;
+    const ccorreo = document.getElementsByName('texto-correo')[0].value;
+    const cnumero = document.getElementsByName('numero')[0].value;
+    const cmensaje = document.getElementsByName('mensaje')[0].value;
+
+    if (
+        !validarCampoObligatorio(cnombre, 'Por favor, ingresa tu nombre.') ||
+        !validarNoNumeros(cnombre, 'Por favor, ingresa un nombre válido.') ||
+        !validarCampoObligatorio(capellido, 'Por favor, ingresa tu apellido.') ||
+        !validarNoNumeros(capellido, 'Por favor, ingresa un apellido válido.') ||
+        !validarCampoObligatorio(ccorreo, 'Por favor, ingresa tu correo.') ||
+        !validarCorreoElectronico(ccorreo, 'Por favor, ingresa un correo válido.') ||
+        !validarCampoObligatorio(cnumero, 'Por favor, ingresa un tu número.') ||
+        !validarCampoObligatorio(cmensaje, 'Por favor, ingresa un tu mensaje.')
+    ) {
+        return false;
+    }
+    return true;
+}
+
+document.querySelector('.formulario-crear').addEventListener('submit', function (event) {
+    console.log('Evento formulario-crear');
+    if (!validarFormularioCrear()) {
         event.preventDefault();
     }
 });
+
+document.querySelector('.formulario-contacto').addEventListener('submit', function (event) {
+    console.log('Evento formulario-contacto');
+    if (!validarFormularioContacto()) {
+        event.preventDefault();
+    }
+});
+
+
+
