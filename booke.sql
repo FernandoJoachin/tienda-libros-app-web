@@ -31,7 +31,7 @@ CREATE TABLE `books` (
   `bookCategory` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `bookStock` int DEFAULT NULL,
   `imagen` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `bookPrice` decimal(5,2) DEFAULT NULL,
+  `bookPrice` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -83,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-01 18:03:37
+-- Dump completed on 2023-12-01 18:06:59
