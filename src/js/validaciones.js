@@ -116,19 +116,20 @@ function validarFormularioContacto() {
     return true;
 }
 
-document.querySelector('.formulario-crear').addEventListener('submit', function (event) {
-    console.log('Evento formulario-crear');
-    if (!validarFormularioCrear()) {
-        event.preventDefault();
-    }
-});
+const formularioCrear = document.querySelector('.formulario-crear');
+if (formularioCrear) {
+    formularioCrear.addEventListener('submit', function (event) {
+        if (!validarFormularioCrear()) {
+            event.preventDefault();
+        }
+    });
+}
 
-document.querySelector('.formulario-contacto').addEventListener('submit', function (event) {
-    console.log('Evento formulario-contacto');
-    if (!validarFormularioContacto()) {
-        event.preventDefault();
-    }
-});
-
-
-
+const formularioContacto = document.querySelector('.formulario-contacto');
+if (formularioContacto) {
+    formularioContacto.addEventListener('submit', function (event) {
+        if (!validarFormularioContacto()) {
+            event.preventDefault();
+        }
+    });
+}
