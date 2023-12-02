@@ -4,3 +4,4 @@ import "./login.js";
 import "./libroindividual.js";
 import "./sweetAlert.js";
 import "./dropdownHeader.js";
+import "./sidebar.js";
