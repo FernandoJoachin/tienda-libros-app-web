@@ -436,6 +436,14 @@ h3 {
     padding: auto;
   }
 }
+.header__iconos-enlace {
+  color: black;
+  transition: 0.25s;
+}
+.header__iconos-enlace:hover {
+  color: #C5801A;
+  transition: 0.25s;
+}
 
 .fa-solid.fa-circle-user {
   cursor: pointer;
@@ -513,6 +521,11 @@ h3 {
 .navegacion__enlace {
   font-weight: bold;
   color: #1a1b15;
+  transition: 0.5s;
+}
+.navegacion__enlace:hover {
+  color: #C5801A;
+  transition: 0.5s;
 }
 .navegacion__enlace--active {
   font-weight: bold;
@@ -1088,6 +1101,21 @@ main {
   display: block;
 }
 
+.carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carrito__contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carrito__totales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .login {
   position: relative;
   margin: 0;

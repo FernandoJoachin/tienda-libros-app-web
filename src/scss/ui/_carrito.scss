@@ -1,0 +1,39 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.carrito {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__contenedor {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mxn.tablet{
+            
+        }
+
+        @include mxn.desktop {
+            
+        }
+    }
+
+    &__totales {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mxn.tablet{
+            
+        }
+
+        @include mxn.desktop {
+            
+        }
+    }
+}

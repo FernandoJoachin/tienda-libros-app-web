@@ -16,6 +16,12 @@
     &__enlace{
         font-weight: bold;
         color: vr.$negro;
+        transition: 0.5s;
+
+        &:hover {
+            color: vr.$primario;
+            transition: 0.5s;
+        }
 
         &--active{
             font-weight: bold;
