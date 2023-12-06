@@ -278,6 +278,9 @@ function eliminarLibro(index) {
 */
 
 
-document.getElementById('botonAtras').addEventListener('click', function () {
-    window.history.back();
-});
+const botonAtras= document.getElementById('botonAtras')
+if(botonAtras){
+    botonAtras.addEventListener('click', function () {
+        window.history.back();
+    });
+}
