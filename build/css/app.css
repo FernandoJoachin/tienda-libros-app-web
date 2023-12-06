@@ -1105,17 +1105,109 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .carrito__contenedor {
   display: flex;
   flex-direction: column;
+}
+.carrito__regresar {
+  border-bottom: 1px solid silver;
+}
+.carrito__regresar-boton {
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+.carrito__regresar-texto {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.carrito__regresar-texto:hover {
+  color: #C5801A;
+}
+.carrito__titulo {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 3.5rem;
+}
+.carrito__articulo {
+  display: grid;
+  grid-template-columns: 10rem 1fr 16rem 5rem 10rem;
+  grid-template-rows: repeat(1, 10rem);
+  gap: 2rem;
   align-items: center;
+  justify-items: center;
+  border: 0px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+.carrito__articulo-imagen {
+  width: 6rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.carrito__articulo-titulo {
+  text-align: center;
+}
+.carrito__articulo-precio {
+  text-align: center;
+}
+.carrito__articulo-eliminar {
+  text-align: center;
+  transition: 0.5s;
+}
+.carrito__articulo-eliminar:hover {
+  color: red;
+  transition: 0.5s;
+}
+.carrito__vacio {
+  text-align: center;
+}
+.carrito__enlace {
+  text-decoration: none;
+  color: #C5801A;
 }
 .carrito__totales {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.cantidad__contenedor {
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+}
+.cantidad__contenedor-incrementar-decrementar {
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #C5801A;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.cantidad__btncolor {
+  color: #C5801A;
+}
+.cantidad__input {
+  border: none;
+  width: 60px;
+  height: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+.cantidad__input::-webkit-inner-spin-button, .cantidad__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cantidad__input:focus {
+  outline: none;
+}
+
 .login {
   position: relative;
   margin: 0;

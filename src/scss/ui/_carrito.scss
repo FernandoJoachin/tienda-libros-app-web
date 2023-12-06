@@ -6,12 +6,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 
     &__contenedor {
         
         display: flex;
         flex-direction: column;
-        align-items: center;
 
         @include mxn.tablet{
             
@@ -20,6 +21,95 @@
         @include mxn.desktop {
             
         }
+    }
+
+    &__regresar {
+
+        border-bottom: 1px solid silver;
+    }
+
+    &__regresar-boton {
+
+        border: none;
+        background-color: transparent;
+        text-decoration: none;
+        padding: 0 1rem;
+
+    }
+
+    &__regresar-texto {
+
+        text-align: left;
+        margin-bottom: 1rem;
+
+        &:hover {
+
+            color: vr.$primario;
+        }
+    }
+
+    &__titulo {
+
+        text-align: center;
+        font-weight: bold;
+        margin-top: 3.5rem;
+    }
+
+    &__articulo {
+
+        display: grid;
+        grid-template-columns: 10rem 1fr 16rem 5rem 10rem;
+        grid-template-rows: repeat(1, 10rem); 
+        gap: 2rem; 
+        align-items: center;
+        justify-items: center;
+
+        border: 0px solid #ccc;
+        border-radius: 1rem;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
+    &__articulo-imagen {
+
+        width: 6rem;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+
+    &__articulo-titulo {
+
+        text-align: center;
+    }
+
+    &__articulo-precio {
+
+        text-align: center;
+    }
+
+    &__articulo-eliminar {
+
+        text-align: center;
+        transition: 0.5s;
+
+        &:hover {
+
+            color: red;
+            transition: 0.5s;
+        }
+    }
+
+    &__vacio {
+
+        text-align: center;
+    }
+
+    &__enlace {
+
+        text-decoration: none;
+        color: vr.$primario;
     }
 
     &__totales {
@@ -34,6 +124,50 @@
 
         @include mxn.desktop {
             
+        }
+    }
+}
+
+.cantidad {
+
+    &__contenedor {
+
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+    
+    &__contenedor-incrementar-decrementar {
+
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        border: 2px solid vr.$primario;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+
+    &__btncolor {
+
+        color: vr.$primario;
+    }
+
+    &__input {
+
+        border: none;
+        width: 60px;
+        height: 100%;
+        font-weight: 500;
+        text-align: center;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        &:focus{
+            outline: none;
         }
     }
 }
