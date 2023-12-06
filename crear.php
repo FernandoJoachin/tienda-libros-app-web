@@ -14,7 +14,7 @@ include __DIR__ . "/template/header-admin.php";
             <div class="crear__contenedor">
 
 
-                <form id="crear-form" class="formulario-crear" method="POST" action="./controllers/BookController/crearLibro.php" enctype="multipart/form-data">
+                <form id="libro-crear-form" class="formulario-crear" method="POST" action="./controllers/BookController/crearLibro.php" enctype="multipart/form-data">
 
                     <div class="formulario-crear__campo">
                         <input class="formulario-crear__input" name="bookIsbn" type="text" value="">
@@ -68,7 +68,7 @@ include __DIR__ . "/template/header-admin.php";
                     <br>
                     <br>
 
-                    <input type="submit" value="Enviar" class="formulario-crear__input--submit">
+                    <input type="submit" value="Enviar" class="formulario-crear__input--submit" id="submitLibro">
 
 
                 </form>

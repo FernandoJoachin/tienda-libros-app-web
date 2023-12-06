@@ -1,5 +1,5 @@
 node_modules/
 vendor/
-build/css/
-build/js/
-build/img/
+build/css/*
+build/js/*
+build/img/*

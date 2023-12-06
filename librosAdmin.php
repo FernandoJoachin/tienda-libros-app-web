@@ -58,7 +58,7 @@
 
                             <form method="POST" action="./controllers/BookController/eliminarLibro.php" class="table__formulario">
                                 <input type="hidden" name="id" value="<?=$libro->id?>">
-                                <button class="table__accion table__accion--eliminar" type="submit">
+                                <button class="table__accion table__accion--eliminar eliminarBtn" type="submit">
                                     <i class="fa-solid fa-circle-xmark"></i>
                                     Eliminar
                                 </button>

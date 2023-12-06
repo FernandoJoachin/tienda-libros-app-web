@@ -36,7 +36,7 @@
             </div>
 
             <div class="formulario-contacto__campo">
-                <input class="formulario-contacto__input" name="numero" type="number" value="">
+                <input class="formulario-contacto__input" name="numero" type="tel" value="">
                 <span></span>
                 <label class="formulario-contacto__label">Teléfono</label>
             </div>

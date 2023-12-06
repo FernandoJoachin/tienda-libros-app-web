@@ -5,5 +5,5 @@ import "./libroindividual.js";
 import "./sweetAlert.js";
 import "./dropdownHeader.js";
 import "./sidebar.js";
-
 import "./validaciones.js";
+import "./eliminarLibroAlerta.js";

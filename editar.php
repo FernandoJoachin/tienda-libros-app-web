@@ -18,7 +18,7 @@ include __DIR__ . "/template/header-admin.php";
                     $libro = buscarLibro($_GET['id']);
                 ?>
 
-                <form class="formulario-crear" method="POST" action="./controllers/BookController/editarLibro.php" enctype="multipart/form-data">
+                <form id="libro-editar-form" class="formulario-crear" method="POST" action="./controllers/BookController/editarLibro.php" enctype="multipart/form-data">
 
                     <input name="id" type="hidden" value="<?= $libro->id?>">
 
@@ -77,7 +77,7 @@ include __DIR__ . "/template/header-admin.php";
                     <br>
                     <br>
 
-                    <input type="submit" value="Enviar" class="formulario-crear__input--submit">
+                    <input type="submit" value="Enviar" class="formulario-crear__input--submit" id="submitLibro">
 
 
                 </form>
