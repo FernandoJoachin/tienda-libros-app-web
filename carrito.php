@@ -30,7 +30,8 @@
 
                 <div class="carrito__totales-contenedor-totales">
                     <p>Total Unidades: <span id="cantidad">0</span></p>
-                    <p>Total Precio: $<span id="precio">0</span></p>
+                    <p>Subtotal Precio: $<span id="precio">0</span> + IVA</p>
+                    <p>Total Precio: $<span id="precioIVA">0</span></p>
                 </div>
                 
                 <div class="carrito__totales-contenedor-botones">
