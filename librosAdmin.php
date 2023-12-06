@@ -18,7 +18,7 @@
         </div>
         <?php 
             require_once __DIR__ . '/controllers/BookController/obtenerLibros.php';
-            $libros = obtenerLibros();
+            $libros = obtenerLibrosPorCategoria($_GET['categoria'] ?? "all");
         ?>
         <table id="books-table" class="table">
             <thead class="table__thead">

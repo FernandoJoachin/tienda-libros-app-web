@@ -6,4 +6,3 @@ require_once __DIR__ . '/../models/ActiveRecord.php';
 
 // Conectarnos a la base de datos
 ActiveRecord::setDB($db);
-session_start();

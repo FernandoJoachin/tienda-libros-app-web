@@ -16,11 +16,11 @@
     &__header-grid {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         @include m.tablet{
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
         }
     }
 
@@ -29,24 +29,29 @@
         @include m.texto-fluido(2rem, 3rem);
     }
 
+    &__usuario{
+        color: v.$blanco;
+        font-weight: bold;
+    }
+
     &__form {
         display: flex;
         justify-content: center;
     }
 
-    &__submit--logout {
+    &__cerrar-sesion {
         @include m.enlace;
     }
 
     &__grid {
         display: flex;
         flex: 1;
-        overflow-y: auto; 
     }
 
     &__sidebar {
         background-color: #FFC42A;
-        width: 12rem;
+        max-width: 15rem;
+        overflow-y: auto; 
     }
 
     &__menu {

@@ -15,7 +15,7 @@
 
     <div class="contacto__contenedor">
 
-        <form id="contacto-form" class= "formulario-contacto">
+        <form class= "formulario-contacto" action="./controllers/PageController/formularioContacto.php" method="POST">
 
             <div class="formulario-contacto__campo">
                 <input class="formulario-contacto__input" name="texto-nombre" type="text" value="">
@@ -59,6 +59,12 @@
         </div>
     </div>
 </main>
+<?php
+    $respuesta = $_GET['respuesta'] ?? null;
+    if ($respuesta) {
+        ?>
+    <div id="alertElement" data-response="<?= htmlspecialchars(json_encode($respuesta)) ?>"></div>
+<?php } ?>
 
 <?php
     include __DIR__ ."/template/footer.php";

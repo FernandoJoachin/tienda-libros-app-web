@@ -9,19 +9,29 @@
 
 <main class="catalogo">
     <div class="catalogo__contenedor">
-        <form class="formulario-filtro contenedor">
+
+        <?php 
+            require_once __DIR__ . '/controllers/BookController/obtenerLibros.php';
+            $libros = filtrarLibros();
+            $categorias = obtenerCategorias();
+        ?>
+
+        <form class="formulario-filtro contenedor" method="POST">
             <div class="formulario-filtro__campo">
-                <label for="ubicacion" class="formulario-filtro__label">Libro</label>
-                <input type="text" class="formulario-filtro__input" id="ubicacion" placeholder="Busca nombre o autor">
+                <label for="titulo" class="formulario-filtro__label">Libro</label>
+                <input type="text" class="formulario-filtro__input" name="titulo" id="titulo" placeholder="Busca por nombre">
+            </div>
+            <div class="formulario-filtro__campo">
+                <label for="autor" class="formulario-filtro__label">Autor</label>
+                <input type="text" class="formulario-filtro__input" name="autor" id="autor" placeholder="Busca por autor">
             </div>
             <div class="formulario-filtro__campo">
                 <label for="huespedes " class="formulario-filtro__label">Categoría </label>
                 <select class="formulario-filtro__input" name="categorias">
                     <option value="" disabled selected>Selecciona una categoría</option>
-                    <option value="fantasia">Fantasía</option>
-                    <option value="ciencia_ficcion">Ciencia Ficción</option>
-                    <option value="misterio">Misterio</option>
-                    <option value="romance">Romance</option>
+                    <?php foreach($categorias as $categoria){ ?>
+                        <option value="<?= strtolower($categoria)?>"><?= $categoria?></option>
+                    <?php } ?>
                     <!-- Puedes agregar más opciones aquí -->
                 </select>
             </div>
@@ -30,30 +40,30 @@
             </div>
         </form>
 
-        <?php 
-            require_once __DIR__ . '/controllers/BookController/obtenerLibros.php';
-            $libros = obtenerLibros();
-        ?>
-
         <div class="catalogo__grid contenedor">
-            <?php foreach($libros as $libro){ ?>
-                <a href="libroIndividual" class="libro">
-                    <div class="libro__contenedor-imagen">
-                        <picture>
-                            <img class="libro__imagen" loading="lazy" src="./build/imagenes/<?php echo $libro->imagen ?>" alt="BookDefault">
-                        </picture>
-                    </div>
-                    <div class="libro__contenido">
-                        <h2 class="libro__titulo"><?= $libro->bookTitle?></h2>
-                        <div class="libro__autor">
-                            <img src="./build/img/User_Square.svg" alt="Autor" class="libro__autor-imagen">
-                            <p  class="libro__autor-nombre"><?= $libro->bookAuthor?></p>
+            <?php if(!empty($libros)){ ?>
+                <?php foreach($libros as $libro){ ?>
+                    <a href="libroIndividual.php" class="libro">
+                        <div class="libro__contenedor-imagen">
+                            <picture>
+                                <img class="libro__imagen" loading="lazy" src="./build/imagenes/<?php echo $libro->imagen ?>" alt="BookDefault">
+                            </picture>
                         </div>
-                        <p class="libro__precio">$<?= $libro->bookPrice?></p>
-                    </div>
-                    <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-                </a><!--libro-->
-            <?php };?>
+                        <div class="libro__contenido">
+                            <h2 class="libro__titulo"><?= $libro->bookTitle?></h2>
+                            <div class="libro__autor">
+                                <img src="./build/img/User_Square.svg" alt="Autor" class="libro__autor-imagen">
+                                <p  class="libro__autor-nombre"><?= $libro->bookAuthor?></p>
+                            </div>
+                            <p class="libro__categoria"><?= $libro->bookCategory?></p>
+                            <p class="libro__precio">$<?= $libro->bookPrice?></p>
+                        </div>
+                        <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                    </a><!--libro-->
+                <?php };?>
+            <?php } else { ?>
+                <h1 class="catalogo__titulo-no-registro">No se encontraron resultados que cumplan con los criterios de búsqueda especificados</h1>
+            <?php } ?>
         </div>
     </div>
 </main>
