@@ -121,18 +121,19 @@ function incrementarCantidad(index) {
 // Manejar clic en el contenedor del carrito
 document.addEventListener('DOMContentLoaded', function () {
     const carritoContenedor = document.querySelector('#articulos');
-
-    carritoContenedor.addEventListener('click', function (event) {
-        const index = event.target.dataset.index;
-
-        if (event.target.classList.contains('decrement') && index !== undefined) {
-            decrementarCantidad(parseInt(index));
-        }
-
-        if (event.target.classList.contains('increment') && index !== undefined) {
-            incrementarCantidad(parseInt(index));
-        }
-    });
+    if(carritoContenedor){
+        carritoContenedor.addEventListener('click', function (event) {
+            const index = event.target.dataset.index;
+    
+            if (event.target.classList.contains('decrement') && index !== undefined) {
+                decrementarCantidad(parseInt(index));
+            }
+    
+            if (event.target.classList.contains('increment') && index !== undefined) {
+                incrementarCantidad(parseInt(index));
+            }
+        });
+    }
 
     // ... (resto del código)
 });
@@ -156,18 +157,20 @@ function actualizarTotales(cartItems) {
 
 // Manejar clic en "Agregar al carrito" en la página del catálogo
 document.addEventListener('DOMContentLoaded', function () {
-    const addToCartButtons = document.querySelectorAll('.libro__enlace');
+    const addToCartButtons = document.querySelectorAll('.bookEnlace');
 
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function () {
             const libro = {
-                title: button.parentElement.querySelector('.libro__titulo').innerText,
-                price: button.parentElement.querySelector('.libro__precio').innerText.replace('$', ''),
-                imagen: button.parentElement.querySelector('.libro__imagen').getAttribute('src').replace('build/imagenes/', ''),
-                id: button.parentElement.querySelector('.libro__id').innerText,
+                title: button.parentElement.querySelector('.bookTitle').innerText,
+                price: button.parentElement.querySelector('.bookPrice').innerText.replace('$', ''),
+                imagen: button.parentElement.querySelector('.bookImage').getAttribute('src').replace('build/imagenes/', ''),
+                id: button.parentElement.querySelector('.bookdId').innerText,
             };
 
             addToCart(libro);
+
+            alert(`¡Se ha agregado "${libro.title}" al carrito!`);
         });
     });
 });
@@ -220,18 +223,20 @@ function reiniciarCarrito() {
 document.addEventListener('DOMContentLoaded', function () {
     const carritoContenedor = document.querySelector('#articulos');
 
-    carritoContenedor.addEventListener('click', function (event) {
-        // Verificar si el clic fue en un botón de eliminar
-        if (event.target.classList.contains('carrito__articulo-eliminar')) {
-            // Obtener el índice del libro asociado al botón
-            const index = event.target.dataset.index;
-
-            // Verificar si el índice es válido y luego eliminar el libro
-            if (index !== undefined && index !== null) {
-                eliminarLibro(parseInt(index));
+    if(carritoContenedor){
+        carritoContenedor.addEventListener('click', function (event) {
+            // Verificar si el clic fue en un botón de eliminar
+            if (event.target.classList.contains('carrito__articulo-eliminar')) {
+                // Obtener el índice del libro asociado al botón
+                const index = event.target.dataset.index;
+    
+                // Verificar si el índice es válido y luego eliminar el libro
+                if (index !== undefined && index !== null) {
+                    eliminarLibro(parseInt(index));
+                }
             }
-        }
-    });
+        });
+    }
 
     // ... (resto del código)
 });

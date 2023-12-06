@@ -47,26 +47,28 @@
         <div class="catalogo__grid contenedor">
             <?php if(!empty($libros)){ ?>
                 <?php foreach($libros as $libro){ ?>
-                    <div class="libro">
-                        <a href="libroIndividual.php">
-                        <div class="libro__contenedor-imagen">
-                            <picture>
-                                <img class="libro__imagen" loading="lazy" src="./build/imagenes/<?php echo $libro->imagen ?>" alt="BookDefault">
-                            </picture>
-                        </div>
-                        <div class="libro__contenido">
-                            <h2 class="libro__titulo"><?= $libro->bookTitle?></h2>
-                            <div class="libro__autor">
-                                <img src="./build/img/User_Square.svg" alt="Autor" class="libro__autor-imagen">
-                                <p  class="libro__autor-nombre"><?= $libro->bookAuthor?></p>
-                            </div>
-                            <p class="libro__categoria"><?= $libro->bookCategory?></p>
-                            <p class="libro__precio">$<?= $libro->bookPrice?></p>
-                        </div>
-                        <p  class="libro__id" hidden><?= $libro->id?></p>
-                        </a>
-                        <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-                </div><!--libro-->
+                    <?php if($libro->bookStock > 0){?>
+                        <div class="libro">
+                            <a href="libroIndividual.php?id=<?= $libro->id;?>">
+                                <div class="libro__contenedor-imagen">
+                                    <picture>
+                                        <img class="libro__imagen bookImage" loading="lazy" src="./build/imagenes/<?php echo $libro->imagen ?>" alt="BookDefault">
+                                    </picture>
+                                </div>
+                                <div class="libro__contenido">
+                                    <h2 class="libro__titulo bookTitle"><?= $libro->bookTitle?></h2>
+                                    <div class="libro__autor">
+                                        <img src="./build/img/User_Square.svg" alt="Autor" class="libro__autor-imagen">
+                                        <p  class="libro__autor-nombre"><?= $libro->bookAuthor?></p>
+                                    </div>
+                                    <p class="libro__categoria"><?= $libro->bookCategory?></p>
+                                    <p class="libro__precio bookPrice">$<?= $libro->bookPrice?></p>
+                                </div>
+                                <p  class="bookdId" hidden><?= $libro->id?></p>
+                            </a>
+                            <button class="libro__enlace bookEnlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                        </div><!--libro-->
+                    <?php }; ?>
                 <?php };?>
             <?php } else { ?>
                 <h1 class="catalogo__titulo-no-registro">No se encontraron resultados que cumplan con los criterios de búsqueda especificados</h1>

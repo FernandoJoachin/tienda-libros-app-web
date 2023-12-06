@@ -1,4 +1,5 @@
 <?php
+    $page = '';
     include __DIR__ ."/template/header.php";
 ?>
 <?php
@@ -16,7 +17,7 @@
             </button>
         </div>
 
-        <form action="./controllers/BookController/comprarLibro.php" method="POST">
+        <form action="./controllers/BookController/comprarLibro.php" method="POST" id="formulario-carrito">
         
             <p class="carrito__titulo">Artículos</p>
 
