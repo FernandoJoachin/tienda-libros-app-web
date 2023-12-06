@@ -18,33 +18,26 @@
                     </picture>
                 </div>
                 <div class="pie-de-foto">
-                    <span><p>“Lo m&aacute;s curioso que hay en la vida es el espect&aacute;culo de la muerte.”</p></span>
                     <div class="pie-de-foto_envio">
                         <i class="fa-solid fa-truck fa-flip-horizontal"></i>
                         <span><p>ENV&Iacute;O GRATIS</p></span>
                     </div>
                 </div>
             </div>
-            <div class="detalles-sup">
-                <span class="detalles-sup_negrita"><p>El conde de Montecristo</p></span>
-                <label class="detalles-sup_negrita">Precio MXN</label><br><br>
-                <div class="contenedor-cantidad">
-                    <label>Cantidad</label>
-                    <div class="btn-incrementar-decrementar">
-                        <i class="fa-solid fa-minus btncolor" id="decrement"></i>
-                        <input type="number" placeholder="1" value="1" min="1" class="input-cantidad">
-                        <i class="fa-solid fa-plus btncolor" id="increment"></i>
-                    </div>
+            <div class="cont-detalles">
+                <div class="detalles-sup">
+                    <span class="detalles-sup_negrita"><p>El conde de Montecristo</p></span>
+                    <label class="detalles-sup_negrita">Precio MXN</label><br><br>
                 </div>
-                <div class="contenedor-envios">
-                    <label>
-                        <input type="radio" name="envio" value="rapido">
-                        Env&iacute;o r&aacute;pido (+50 MXN)
-                    </label>
-                    <label>
-                        <input type="radio" name="envio" value="gratis">
-                        Env&iacute;o gratis
-                    </label>
+                <div class="detalles">
+                    <span class="detalles__titulo"><p>Detalles del Libro</p></span>
+                    <span class="detalles__info">
+                        <p>ISBN:</p>
+                        <p>Autor:</p>
+                        <p>Disponibles:</p>
+                        <p>Edici&oacute;n:</p>
+                        <p>Categoría:</p>
+                    </span>
                 </div>
                 <div class="contenedor-carrito">
                     <button class="btn-add-cart">
@@ -53,19 +46,8 @@
                     </button>
                 </div>
             </div>
-            <div class="detalles">
-                <span class="detalles__titulo"><p>Detalles del Libro</p></span>
-                <span class="detalles__info">
-                    <p>ISBN:</p>
-                    <p>Autor:</p>
-                    <p>Disponibles:</p>
-                    <p>Edici&oacute;n:</p>
-                    <p>Categoría:</p>
-                </span>
-            </div>
         </div>
-
-        <input type="submit" class="formulario-carrito-compras__submit" value="Enviar">
+        <a class="boton_regresar" href="catalogo.php">Regresar</a>
     </form>
 </main>
 <?php

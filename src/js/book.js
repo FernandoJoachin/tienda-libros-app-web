@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         infoFiltered: '(filtrado de _MAX_ libros totales)',
         lengthMenu: 'Mostrar _MENU_ libros',
       },
+      responsive: true,
       columnDefs: [{ orderable: false, responsivePriority: 1, targets: -1 }],
     });
   });
