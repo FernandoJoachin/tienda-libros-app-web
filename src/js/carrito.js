@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function actualizarTotales(cartItems) {
     const cantidadElemento = document.getElementById('cantidad');
     const precioElemento = document.getElementById('precio');
+    const precioIVAElemento = document.getElementById('precioIVA'); // Nuevo elemento para mostrar el precio con IVA
 
     // Calcular total de unidades y precio
     const totalUnidades = cartItems.reduce((total, libro) => total + libro.cantidad, 0);
@@ -150,9 +151,13 @@ function actualizarTotales(cartItems) {
     // Calcular total de precio considerando la cantidad de libros por unidad
     const totalPrecio = cartItems.reduce((total, libro) => total + (libro.cantidad * parseFloat(libro.price)), 0);
 
+    // Calcular el precio con IVA (16%)
+    const totalPrecioIVA = totalPrecio * 1.16;
+
     // Actualizar los elementos en la página
     cantidadElemento.textContent = totalUnidades;
     precioElemento.textContent = totalPrecio.toFixed(2);
+    precioIVAElemento.textContent = totalPrecioIVA.toFixed(2); // Actualizar el precio con IVA
 }
 
 // Manejar clic en "Agregar al carrito" en la página del catálogo
@@ -212,9 +217,11 @@ function reiniciarCarrito() {
     // Reiniciar los totales en la interfaz
     const totalUnidadesElement = document.getElementById('cantidad');
     const totalPrecioElement = document.getElementById('precio');
+    const totalPrecioElementIVA = document.getElementById('precioIVA');
     
     totalUnidadesElement.textContent = '0';
     totalPrecioElement.textContent = '0';
+    totalPrecioElementIVA.textContent = '0';
     
     // Puedes agregar más lógica de reinicio aquí según sea necesario
 }
