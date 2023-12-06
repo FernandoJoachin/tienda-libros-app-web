@@ -18,25 +18,25 @@
         <form class= "formulario-contacto" action="./controllers/PageController/formularioContacto.php" method="POST">
 
             <div class="formulario-contacto__campo">
-                <input class="formulario-contacto__input" name="texto-nombre" type="text" value="" required>
+                <input class="formulario-contacto__input" name="texto-nombre" type="text" value="">
                 <span></span>
                 <label class="formulario-contacto__label">Nombre</label>
             </div>
 
             <div class="formulario-contacto__campo">
-                <input class="formulario-contacto__input" name="texto-apellido" type="text" value="" required>
+                <input class="formulario-contacto__input" name="texto-apellido" type="text" value="">
                 <span></span>
                 <label class="formulario-contacto__label">Apellido</label>
             </div>
 
             <div class="formulario-contacto__campo">
-                <input class="formulario-contacto__input" name="texto-correo" type="text" value="" required>
+                <input class="formulario-contacto__input" name="texto-correo" type="text" value="">
                 <span></span>
                 <label class="formulario-contacto__label">Correo</label>
             </div>
 
             <div class="formulario-contacto__campo">
-                <input class="formulario-contacto__input" name="numero" type="number" value="" required>
+                <input class="formulario-contacto__input" name="numero" type="tel" value="">
                 <span></span>
                 <label class="formulario-contacto__label">Teléfono</label>
             </div>
@@ -50,6 +50,13 @@
             <input type="submit" value="Enviar" class="formulario-contacto__input--submit">
         
         </form>
+    </div>
+    <div id="modalAlerta" class="modalAlerta">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
+            <p id="modal-message"></p>
+        </div>
     </div>
 </main>
 <?php

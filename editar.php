@@ -18,48 +18,48 @@ include __DIR__ . "/template/header-admin.php";
                     $libro = buscarLibro($_GET['id']);
                 ?>
 
-                <form class="formulario-crear" method="POST" action="./controllers/BookController/editarLibro.php" enctype="multipart/form-data">
+                <form id="libro-editar-form" class="formulario-crear" method="POST" action="./controllers/BookController/editarLibro.php" enctype="multipart/form-data">
 
-                    <input name="id" type="hidden" value="<?= $libro->id?>" required>
+                    <input name="id" type="hidden" value="<?= $libro->id?>">
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="bookIsbn" type="text" value="<?= $libro->bookIsbn?>" required>
+                        <input class="formulario-crear__input" name="bookIsbn" type="text" value="<?= $libro->bookIsbn?>">
                         <span></span>
                         <label class="formulario-crear__label">ISBN</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="bookTitle" type="text" value="<?= $libro->bookTitle?>" required>
+                        <input class="formulario-crear__input" name="bookTitle" type="text" value="<?= $libro->bookTitle?>">
                         <span></span>
                         <label class="formulario-crear__label">Título</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="bookAuthor" type="text" value="<?= $libro->bookAuthor?>" required>
+                        <input class="formulario-crear__input" name="bookAuthor" type="text" value="<?= $libro->bookAuthor?>">
                         <span></span>
                         <label class="formulario-crear__label">Autor</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="bookEdition" type="text" value="<?= $libro->bookEdition?>" required>
+                        <input class="formulario-crear__input" name="bookEdition" type="text" value="<?= $libro->bookEdition?>">
                         <span></span>
                         <label class="formulario-crear__label">Edición</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="bookCategory" type="text" value="<?= $libro->bookCategory?>" required>
+                        <input class="formulario-crear__input" name="bookCategory" type="text" value="<?= $libro->bookCategory?>">
                         <span></span>
                         <label class="formulario-crear__label">Categoría</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="bookPrice" type="number" value="<?= $libro->bookPrice?>" required>
+                        <input class="formulario-crear__input" name="bookPrice" type="number" value="<?= $libro->bookPrice?>">
                         <span></span>
                         <label class="formulario-crear__label">Precio</label>
                     </div>
 
                     <div class="formulario-crear__campo">
-                        <input class="formulario-crear__input" name="bookStock" type="number" value="<?= $libro->bookStock?>" required>
+                        <input class="formulario-crear__input" name="bookStock" type="number" value="<?= $libro->bookStock?>">
                         <span></span>
                         <label class="formulario-crear__label">Stock</label>
                     </div>
@@ -77,7 +77,7 @@ include __DIR__ . "/template/header-admin.php";
                     <br>
                     <br>
 
-                    <input type="submit" value="Enviar" class="formulario-crear__input--submit">
+                    <input type="submit" value="Enviar" class="formulario-crear__input--submit" id="submitLibro">
 
 
                 </form>
@@ -86,6 +86,15 @@ include __DIR__ . "/template/header-admin.php";
             <a class="crear__regresar" href="librosAdmin.php">Regresar</a>
 
         </section>
+
+        <div id="modalAlerta" class="modalAlerta">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
+                <p id="modal-message"></p>
+            </div>
+        </div>
+
     </main>
 </div>
 
