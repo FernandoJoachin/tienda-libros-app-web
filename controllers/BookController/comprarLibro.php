@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if(empty($errores)){
         $respuesta = [
             'respuesta' => [
-                'title'   => 'Pago exitoso',
+                'title'   => 'Pago realizado',
                 'message' => 'Se ha realizado la transacción correctamente',
                 'type'    => 'success',
             ]
