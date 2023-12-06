@@ -40,10 +40,15 @@
             </div>
         </form>
 
+        <!-- Mensaje de Confirmación -->
+        <div id="mensaje-agregado-carrito" class="mensaje-agregado-carrito"></div>
+
+
         <div class="catalogo__grid contenedor">
             <?php if(!empty($libros)){ ?>
                 <?php foreach($libros as $libro){ ?>
-                    <a href="libroIndividual.php" class="libro">
+                    <div class="libro">
+                        <a href="libroIndividual.php">
                         <div class="libro__contenedor-imagen">
                             <picture>
                                 <img class="libro__imagen" loading="lazy" src="./build/imagenes/<?php echo $libro->imagen ?>" alt="BookDefault">
@@ -58,8 +63,9 @@
                             <p class="libro__categoria"><?= $libro->bookCategory?></p>
                             <p class="libro__precio">$<?= $libro->bookPrice?></p>
                         </div>
+                        </a>
                         <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-                    </a><!--libro-->
+                </div><!--libro-->
                 <?php };?>
             <?php } else { ?>
                 <h1 class="catalogo__titulo-no-registro">No se encontraron resultados que cumplan con los criterios de búsqueda especificados</h1>

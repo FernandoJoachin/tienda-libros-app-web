@@ -34,7 +34,7 @@
         background-color: transparent;
         text-decoration: none;
         padding: 0 1rem;
-
+        cursor: pointer;
     }
 
     &__regresar-texto {
@@ -53,6 +53,7 @@
         text-align: center;
         font-weight: bold;
         margin-top: 3.5rem;
+        margin-bottom: 2.5rem;
     }
 
     &__articulo {
@@ -81,6 +82,7 @@
 
     &__articulo-titulo {
 
+        text-transform: uppercase;
         text-align: center;
     }
 
@@ -93,6 +95,9 @@
 
         text-align: center;
         transition: 0.5s;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
 
         &:hover {
 
@@ -104,6 +109,7 @@
     &__vacio {
 
         text-align: center;
+        padding: 0 2rem;
     }
 
     &__enlace {
@@ -112,11 +118,20 @@
         color: vr.$primario;
     }
 
+    &__totales-contenedor-totales {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
     &__totales {
         
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-items: center;
 
         @include mxn.tablet{
             
@@ -124,6 +139,63 @@
 
         @include mxn.desktop {
             
+        }
+    }
+
+    &__totales-contenedor-botones {
+
+        display: flex;
+        flex-direction: row;
+        margin-top: 3rem;
+    }
+
+    &__totales-comprar {
+
+        width: 16rem;
+        height: 5rem;
+        border: 2px solid #C5801A;
+        background: #C5801A;
+        border-radius: 2.5rem;
+        font-size: 1.8rem;
+        color: #FFFFFF;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+        transition: .5s;
+        margin-bottom: 40px;
+        transition: 0.3s;
+
+        &:hover {
+
+            box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+    }
+
+    &__totales-reiniciar {
+
+        width: 16rem;
+        height: 5rem;
+        border: 2px solid #C5801A;
+        background: #FFFFFF;
+        border-radius: 2.5rem;
+        font-size: 1.8rem;
+        color: #C5801A;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+        transition: .5s;
+        margin-bottom: 40px;
+        margin-right: 3rem;
+        transition: 0.3s;
+
+        &:hover {
+
+            background: #C5801A;
+            color: #FFFFFF;
+            border: 2px solid #C5801A;
+            box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
         }
     }
 }
