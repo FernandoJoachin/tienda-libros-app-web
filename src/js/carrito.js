@@ -59,12 +59,13 @@ function showCartItems() {
         carritoArticulo.classList.add('carrito__articulo');
 
         carritoArticulo.innerHTML = `
+            <input type="hidden" value="${libro.id}" name="bookID[]">
             <img src="build/imagenes/${libro.imagen}" alt="Portada" class="carrito__articulo-imagen">
             <p class="carrito__articulo-titulo">${libro.title}</p>
 
             <div class="cantidad__contenedor-incrementar-decrementar">
                 <i class="fa-solid fa-minus cantidad__btncolor decrement" data-index="${index}"></i>
-                <input id="cantidad-${index}" type="number" placeholder="1" value="${libro.cantidad}" min="1" class="cantidad__input" readonly>
+                <input id="cantidad-${index}" type="number" placeholder="1" value="${libro.cantidad}" min="1" class="cantidad__input" name="bookCant[]" readonly>
                 <i class="fa-solid fa-plus cantidad__btncolor increment" data-index="${index}"></i>
             </div>
             
@@ -163,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 title: button.parentElement.querySelector('.libro__titulo').innerText,
                 price: button.parentElement.querySelector('.libro__precio').innerText.replace('$', ''),
                 imagen: button.parentElement.querySelector('.libro__imagen').getAttribute('src').replace('build/imagenes/', ''),
-                // Agrega más propiedades según sea necesario
+                id: button.parentElement.querySelector('.libro__id').innerText,
             };
 
             addToCart(libro);

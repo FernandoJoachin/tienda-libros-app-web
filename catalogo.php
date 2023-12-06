@@ -63,6 +63,7 @@
                             <p class="libro__categoria"><?= $libro->bookCategory?></p>
                             <p class="libro__precio">$<?= $libro->bookPrice?></p>
                         </div>
+                        <p  class="libro__id" hidden><?= $libro->id?></p>
                         </a>
                         <button class="libro__enlace"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
                 </div><!--libro-->

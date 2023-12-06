@@ -15,27 +15,31 @@
             <p class="carrito__regresar-texto">Regresar</p>
             </button>
         </div>
-        
-        <p class="carrito__titulo">Artículos</p>
 
-        <div id="articulos"></div>
-        <!--Libros agreagdos al carrito-->
+        <form action="./controllers/BookController/comprarLibro.php" method="POST">
         
-        <p id="carrito-vacio" class="carrito__vacio">Ups! El carrito está vacío, <a href="catalogo.php" class="carrito__enlace">elige algunos productos</a>.</p>
-        
-        <section id="totales" class="carrito__totales">
+            <p class="carrito__titulo">Artículos</p>
 
-            <div class="carrito__totales-contenedor-totales">
-                <p>Total Unidades: <span id="cantidad">0</span></p>
-                <p>Total Precio: $<span id="precio">0</span></p>
-            </div>
+            <div id="articulos"></div>
+            <!--Libros agreagdos al carrito-->
             
-            <div class="carrito__totales-contenedor-botones">
-                <button class="carrito__totales-reiniciar">Reiniciar</button>
+            <p id="carrito-vacio" class="carrito__vacio">Ups! El carrito está vacío, <a href="catalogo.php" class="carrito__enlace">elige algunos productos</a>.</p>
+            
+            <section id="totales" class="carrito__totales">
+
+                <div class="carrito__totales-contenedor-totales">
+                    <p>Total Unidades: <span id="cantidad">0</span></p>
+                    <p>Total Precio: $<span id="precio">0</span></p>
+                </div>
                 
-                <button id="botonRealizarCompra" class="carrito__totales-comprar">Comprar</button>
-            </div>
-        </section>
+                <div class="carrito__totales-contenedor-botones">
+                    <input type="reset" class="carrito__totales-reiniciar" value="Reiniciar">
+                    
+                    <input type="submit" id="botonRealizarCompra" class="carrito__totales-comprar" value="Comprar">
+                </div>
+            </section>
+
+        </form>
     </div>
 </main>
 

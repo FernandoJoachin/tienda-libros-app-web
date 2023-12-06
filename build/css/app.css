@@ -572,6 +572,9 @@ h3 {
   margin: 0;
 }
 
+.home__grid {
+  align-items: center;
+}
 @media (min-width: 768px) {
   .home__grid {
     display: grid;
@@ -590,6 +593,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 8rem 0;
 }
 .home__contenido {
   width: 50rem;
