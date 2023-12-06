@@ -436,6 +436,14 @@ h3 {
     padding: auto;
   }
 }
+.header__iconos-enlace {
+  color: black;
+  transition: 0.25s;
+}
+.header__iconos-enlace:hover {
+  color: #C5801A;
+  transition: 0.25s;
+}
 
 .fa-solid.fa-circle-user {
   cursor: pointer;
@@ -513,6 +521,11 @@ h3 {
 .navegacion__enlace {
   font-weight: bold;
   color: #1a1b15;
+  transition: 0.5s;
+}
+.navegacion__enlace:hover {
+  color: #C5801A;
+  transition: 0.5s;
 }
 .navegacion__enlace--active {
   font-weight: bold;
@@ -596,6 +609,9 @@ h3 {
   cursor: pointer;
 }
 
+.home__grid {
+  align-items: center;
+}
 @media (min-width: 768px) {
   .home__grid {
     display: grid;
@@ -614,6 +630,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 8rem 0;
 }
 .home__contenido {
   width: 50rem;
@@ -1146,6 +1163,175 @@ main {
 
 .dropwdown-show {
   display: block;
+}
+
+.carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.carrito__contenedor {
+  display: flex;
+  flex-direction: column;
+}
+.carrito__regresar {
+  border-bottom: 1px solid silver;
+}
+.carrito__regresar-boton {
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.carrito__regresar-texto {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.carrito__regresar-texto:hover {
+  color: #C5801A;
+}
+.carrito__titulo {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+.carrito__articulo {
+  display: grid;
+  grid-template-columns: 10rem 1fr 16rem 5rem 10rem;
+  grid-template-rows: repeat(1, 10rem);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  border: 0px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+.carrito__articulo-imagen {
+  width: 6rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.carrito__articulo-titulo {
+  text-transform: uppercase;
+  text-align: center;
+}
+.carrito__articulo-precio {
+  text-align: center;
+}
+.carrito__articulo-eliminar {
+  text-align: center;
+  transition: 0.5s;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.carrito__articulo-eliminar:hover {
+  color: red;
+  transition: 0.5s;
+}
+.carrito__vacio {
+  text-align: center;
+  padding: 0 2rem;
+}
+.carrito__enlace {
+  text-decoration: none;
+  color: #C5801A;
+}
+.carrito__totales-contenedor-totales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.carrito__totales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.carrito__totales-contenedor-botones {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+}
+.carrito__totales-comprar {
+  width: 16rem;
+  height: 5rem;
+  border: 2px solid #C5801A;
+  background: #C5801A;
+  border-radius: 2.5rem;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+  margin-bottom: 40px;
+  transition: 0.3s;
+}
+.carrito__totales-comprar:hover {
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+.carrito__totales-reiniciar {
+  width: 16rem;
+  height: 5rem;
+  border: 2px solid #C5801A;
+  background: #FFFFFF;
+  border-radius: 2.5rem;
+  font-size: 1.8rem;
+  color: #C5801A;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+  margin-bottom: 40px;
+  margin-right: 3rem;
+  transition: 0.3s;
+}
+.carrito__totales-reiniciar:hover {
+  background: #C5801A;
+  color: #FFFFFF;
+  border: 2px solid #C5801A;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.cantidad__contenedor {
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+}
+.cantidad__contenedor-incrementar-decrementar {
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #C5801A;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.cantidad__btncolor {
+  color: #C5801A;
+}
+.cantidad__input {
+  border: none;
+  width: 60px;
+  height: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+.cantidad__input::-webkit-inner-spin-button, .cantidad__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cantidad__input:focus {
+  outline: none;
 }
 
 .login {

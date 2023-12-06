@@ -42,9 +42,9 @@
                 </nav>
 
                 <div class="header__iconos">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="carrito.php" class="header__iconos-enlace"><i class="fa-solid fa-cart-shopping"></i></a>
                     <div class="header__usuario">
-                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="fa-solid fa-circle-user header__iconos-enlace"></i>
                         <div class="dropwdown">
                             <ul class="dropwdown__contenido">
                                 <li class="dropwdown__elemento">

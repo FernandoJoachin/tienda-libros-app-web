@@ -62,6 +62,17 @@
             padding: auto;
         }
     }
+
+    &__iconos-enlace {
+
+        color: black;
+        transition: 0.25s;
+
+        &:hover {
+            color: vr.$primario;
+            transition: 0.25s;
+        }
+    }
    
 }
 

@@ -34,5 +34,11 @@
     </div>
 </main>
 <?php
+    $respuesta = $_GET['respuesta'] ?? null;
+    if ($respuesta) {
+        ?>
+    <div id="alertElement" data-response="<?= htmlspecialchars(json_encode($respuesta)) ?>"></div>
+<?php } ?>
+<?php
     include __DIR__ ."/template/footer.php";
 ?>
