@@ -1591,6 +1591,9 @@ main {
 .table__accion:hover {
   cursor: pointer;
 }
+.table__imagen {
+  width: 100px;
+}
 
 .crear {
   display: flex;

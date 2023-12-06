@@ -7,7 +7,8 @@ if(botones){
 
             const row = event.target.closest('tr');
 
-            const bookImage = row.querySelector('.table__td:nth-child(8)').textContent;
+            const bookImage = row.querySelector('.table__td:nth-child(8)').querySelector('.table__imagen').src;
+            console.log(bookImage);
 
             const bookIsbn = row.querySelector('.table__td:nth-child(1)').textContent;
             const bookTitle = row.querySelector('.table__td:nth-child(2)').textContent;
@@ -29,8 +30,8 @@ if(botones){
             ventana.document.writeln("Stock: " + bookStock+ "<br>");
 
             const imgElement = ventana.document.createElement("img");
-            imgElement.src = "./src/img/" + bookImage;
-            imgElement.alt = "Book Image";
+            imgElement.src = bookImage;
+            imgElement.alt = bookTitle;
             ventana.document.body.appendChild(imgElement);
 
             console.log(imgElement);

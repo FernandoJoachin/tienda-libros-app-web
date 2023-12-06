@@ -30,8 +30,8 @@
                     <th scope="col" class="table__th">Categoría</th>
                     <th scope="col" class="table__th">Precio</th>
                     <th scope="col" class="table__th">Stock</th>
-                    <th scope="col" class="table__th">Acciones</th>
                     <th scope="col" class="table__th">Imagen</th>
+                    <th scope="col" class="table__th">Acciones</th>
                 </tr>
             </thead>
 
@@ -46,7 +46,7 @@
                         <td class="table__td"><?= $libro->bookCategory?></td>
                         <td class="table__td">$<?= $libro->bookPrice?></td>
                         <td class="table__td"><?= $libro->bookStock?></td>
-                        <td hidden class="table__td"><?= $libro->imagen?></td>
+                        <td class="table__td"><img class="table__imagen" src="./build/imagenes/<?= $libro->imagen ?>" alt="<?= $libro->bookTitle?>"></td>
                         <td class="table__td--acciones">
                             <a class="table__accion table__accion--editar" href="<?= $GLOBALS["raiz_sitio"] . "editar.php?id=" . $libro->id ?>">
                                 <i class="fa-solid fa-user-pen"></i>
@@ -78,8 +78,8 @@
                     <th scope="col" class="table__th">Categoría</th>
                     <th scope="col" class="table__th">Precio</th>
                     <th scope="col" class="table__th">Stock</th>
-                    <th scope="col" class="table__th">Acciones</th>
                     <th scope="col" class="table__th">Imagen</th>
+                    <th scope="col" class="table__th">Acciones</th>
                 </tr>
             </tfoot>
         </table>
