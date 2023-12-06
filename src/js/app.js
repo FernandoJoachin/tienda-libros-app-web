@@ -7,5 +7,6 @@ import "./dropdownHeader.js";
 import "./sidebar.js";
 import "./validaciones.js";
 import "./eliminarLibroAlerta.js";
+import "./ver.js";
 import "./carritoAlerta.js";
 import "./carrito.js";
