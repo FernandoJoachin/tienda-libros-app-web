@@ -31,6 +31,7 @@
                     <th scope="col" class="table__th">Precio</th>
                     <th scope="col" class="table__th">Stock</th>
                     <th scope="col" class="table__th">Acciones</th>
+                    <th scope="col" class="table__th">Imagen</th>
                 </tr>
             </thead>
 
@@ -45,6 +46,7 @@
                         <td class="table__td"><?= $libro->bookCategory?></td>
                         <td class="table__td">$<?= $libro->bookPrice?></td>
                         <td class="table__td"><?= $libro->bookStock?></td>
+                        <td hidden class="table__td"><?= $libro->imagen?></td>
                         <td class="table__td--acciones">
                             <a class="table__accion table__accion--editar" href="<?= $GLOBALS["raiz_sitio"] . "editar.php?id=" . $libro->id ?>">
                                 <i class="fa-solid fa-user-pen"></i>
@@ -58,7 +60,7 @@
 
                             <form method="POST" action="./controllers/BookController/eliminarLibro.php" class="table__formulario">
                                 <input type="hidden" name="id" value="<?=$libro->id?>">
-                                <button class="table__accion table__accion--eliminar eliminarBtn" type="submit">
+                                <button class="table__accion table__accion--eliminar" type="submit">
                                     <i class="fa-solid fa-circle-xmark"></i>
                                     Eliminar
                                 </button>
@@ -77,6 +79,7 @@
                     <th scope="col" class="table__th">Precio</th>
                     <th scope="col" class="table__th">Stock</th>
                     <th scope="col" class="table__th">Acciones</th>
+                    <th scope="col" class="table__th">Imagen</th>
                 </tr>
             </tfoot>
         </table>
